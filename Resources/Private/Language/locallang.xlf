@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-01-10T20:11:35Z" product-name="myaudioshop">
+		<header/>
+		<body>
+
+			<trans-unit id="tx_myaudioshop_domain_model_masad">
+				<source>This is the ad model</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.name">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.has_category">
+				<source>The category the ad belongs to </source>
+			</trans-unit>
+			
+			<trans-unit id="tx_myaudioshop_domain_model_category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_category.name">
+				<source>Category name</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_category.parent_category">
+				<source>parentCategory</source>
+			</trans-unit>
+			
+		</body>
+	</file>
+</xliff>

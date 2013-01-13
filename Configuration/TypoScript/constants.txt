@@ -1,0 +1,14 @@
+plugin.tx_myaudioshop {
+	view {
+		# cat=plugin.tx_myaudioshop/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:myaudioshop/Resources/Private/Templates/
+		# cat=plugin.tx_myaudioshop/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:myaudioshop/Resources/Private/Partials/
+		# cat=plugin.tx_myaudioshop/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:myaudioshop/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_myaudioshop//a; type=string; label=Default storage PID
+		storagePid =
+	}
+}
