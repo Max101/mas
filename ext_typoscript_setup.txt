@@ -1,0 +1,14 @@
+config.tx_extbase{
+    persistence{
+        classes{
+
+             {
+                mapping {
+                    tableName = static_countries
+                    recordType = Tx_Myaudioshop_Country
+                }
+            }
+            
+    	}
+    }
+}

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2013-01-10T20:11:35Z" product-name="myaudioshop">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-01-14T22:25:58Z" product-name="myaudioshop">
 		<header/>
 		<body>
 
@@ -13,8 +13,35 @@
 			<trans-unit id="tx_myaudioshop_domain_model_masad.description">
 				<source>Description</source>
 			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.price">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.new_price">
+				<source>New Price</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.manual">
+				<source>Manual</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.remote">
+				<source>Remote</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.shipment_type">
+				<source>Shipment Type</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.payment">
+				<source>Payment</source>
+			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_masad.has_category">
 				<source>Has Category</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.has_country">
+				<source>Has Country</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.user_created">
+				<source>User Created</source>
 			</trans-unit>
 
 			<trans-unit id="tx_myaudioshop_domain_model_category">
@@ -27,6 +54,14 @@
 				<source>Parent Category</source>
 			</trans-unit>
 
+			<trans-unit id="tx_myaudioshop_domain_model_country">
+				<source>Country</source>
+			</trans-unit>
+			
+			<trans-unit id="static_countries.tx_extbase_type.Tx_Myaudioshop_Country">
+				<source>MyAudioShop Country</source>
+			</trans-unit>
+			
 		</body>
 	</file>
 </xliff>

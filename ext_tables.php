@@ -34,7 +34,7 @@ $TCA['tx_myaudioshop_domain_model_masad'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'name,description,has_category,',
+		'searchFields' => 'name,description,images,price,new_price,manual,remote,shipment_type,payment,has_category,has_country,user_created,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/MasAd.php',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_myaudioshop_domain_model_masad.gif'
 	),
@@ -68,5 +68,17 @@ $TCA['tx_myaudioshop_domain_model_category'] = array(
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_myaudioshop_domain_model_category.gif'
 	),
 );
+
+$tmp_myaudioshop_columns = array(
+
+);
+
+t3lib_extMgm::addTCAcolumns('static_countries',$tmp_myaudioshop_columns);
+
+$TCA['static_countries']['columns'][$TCA['static_countries']['ctrl']['type']]['config']['items'][] = array('LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:static_countries.tx_extbase_type.Tx_Myaudioshop_Country','Tx_Myaudioshop_Country');
+
+$TCA['static_countries']['types']['Tx_Myaudioshop_Country']['showitem'] = $TCA['static_countries']['types']['1']['showitem'];
+$TCA['static_countries']['types']['Tx_Myaudioshop_Country']['showitem'] .= ',--div--;LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_country,';
+$TCA['static_countries']['types']['Tx_Myaudioshop_Country']['showitem'] .= '';
 
 ?>

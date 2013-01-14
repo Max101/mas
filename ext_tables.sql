@@ -8,7 +8,16 @@ CREATE TABLE tx_myaudioshop_domain_model_masad (
 
 	name varchar(255) DEFAULT '' NOT NULL,
 	description text NOT NULL,
+	images text NOT NULL,
+	price double(11,2) DEFAULT '0.00' NOT NULL,
+	new_price double(11,2) DEFAULT '0.00' NOT NULL,
+	manual tinyint(1) unsigned DEFAULT '0' NOT NULL,
+	remote tinyint(1) unsigned DEFAULT '0' NOT NULL,
+	shipment_type int(11) DEFAULT '0' NOT NULL,
+	payment int(11) DEFAULT '0' NOT NULL,
 	has_category int(11) unsigned DEFAULT '0',
+	has_country int(11) unsigned DEFAULT '0',
+	user_created int(11) unsigned DEFAULT '0',
 
 	tstamp int(11) unsigned DEFAULT '0' NOT NULL,
 	crdate int(11) unsigned DEFAULT '0' NOT NULL,
@@ -78,5 +87,12 @@ CREATE TABLE tx_myaudioshop_domain_model_category (
 	KEY parent (pid),
 	KEY t3ver_oid (t3ver_oid,t3ver_wsid),
 	KEY language (l10n_parent,sys_language_uid)
+
+);
+
+#
+# Table structure for table 'static_countries'
+#
+CREATE TABLE static_countries (
 
 );

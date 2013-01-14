@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2013-01-10T20:11:35Z" product-name="myaudioshop">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-01-14T22:25:58Z" product-name="myaudioshop">
 		<header/>
 		<body>
 
@@ -13,8 +13,35 @@
 			<trans-unit id="tx_myaudioshop_domain_model_masad.description">
 				<source>description</source>
 			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.images">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.price">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.new_price">
+				<source>newPrice</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.manual">
+				<source>Owners manual provided?</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.remote">
+				<source>Remote control provided?</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.shipment_type">
+				<source>Type of shipment provided</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.payment">
+				<source>Type of payment accepted</source>
+			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_masad.has_category">
 				<source>The category the ad belongs to </source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.has_country">
+				<source>Country of the ad</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.user_created">
+				<source>User who created the ad</source>
 			</trans-unit>
 			
 			<trans-unit id="tx_myaudioshop_domain_model_category">
@@ -25,6 +52,10 @@
 			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_category.parent_category">
 				<source>parentCategory</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_myaudioshop_domain_model_country">
+				<source>Country</source>
 			</trans-unit>
 			
 		</body>

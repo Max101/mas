@@ -3,6 +3,34 @@
 </label><br />
 	<f:form.textfield property="name" /><br />
 <label for="description">
-	<f:translate key="tx_myaudioshop_domain_model_masad.description" />
+	<f:translate key="tx_myaudioshop_domain_model_masad.description" /> <span class="required">(required)</span>
 </label><br />
 	<f:form.textarea property="description" cols="40" rows="15" /><br />
+<label for="images">
+	<f:translate key="tx_myaudioshop_domain_model_masad.images" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.upload property="images" /><br />
+<label for="price">
+	<f:translate key="tx_myaudioshop_domain_model_masad.price" />
+</label><br />
+	<f:form.textfield property="price" /><br />
+<label for="newPrice">
+	<f:translate key="tx_myaudioshop_domain_model_masad.new_price" />
+</label><br />
+	<f:form.textfield property="newPrice" /><br />
+<label for="manual">
+	<f:translate key="tx_myaudioshop_domain_model_masad.manual" />
+</label><br />
+	<f:form.checkbox property="manual" value="1" /><br />
+<label for="remote">
+	<f:translate key="tx_myaudioshop_domain_model_masad.remote" />
+</label><br />
+	<f:form.checkbox property="remote" value="1" /><br />
+<label for="shipmentType">
+	<f:translate key="tx_myaudioshop_domain_model_masad.shipment_type" />
+</label><br />
+	<f:form.textfield property="shipmentType" /><br />
+<label for="payment">
+	<f:translate key="tx_myaudioshop_domain_model_masad.payment" />
+</label><br />
+	<f:form.textfield property="payment" /><br />

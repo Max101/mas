@@ -107,9 +107,6 @@ $TCA['tx_myaudioshop_domain_model_category'] = array(
 			'label' => 'LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_category.parent_category',
 			'config' => array(
 				'type' => 'select',
-				'items' => array(
-					array('--none--', 0),
-					),
 				'foreign_table' => 'tx_myaudioshop_domain_model_category',
 				'minitems' => 0,
 				'maxitems' => 1,
@@ -118,4 +115,5 @@ $TCA['tx_myaudioshop_domain_model_category'] = array(
 	),
 );
 
+## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
 ?>

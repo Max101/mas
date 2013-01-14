@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2013-01-10T20:11:35Z" product-name="myaudioshop">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-01-14T22:25:58Z" product-name="myaudioshop">
 		<header/>
 		<body>
 
@@ -10,8 +10,35 @@
 			<trans-unit id="description.description">
 				<source>description</source>
 			</trans-unit>
+			<trans-unit id="images.description">
+				<source>Images</source>
+			</trans-unit>
+			<trans-unit id="price.description">
+				<source>Price</source>
+			</trans-unit>
+			<trans-unit id="new_price.description">
+				<source>newPrice</source>
+			</trans-unit>
+			<trans-unit id="manual.description">
+				<source>Owners manual provided?</source>
+			</trans-unit>
+			<trans-unit id="remote.description">
+				<source>Remote control provided?</source>
+			</trans-unit>
+			<trans-unit id="shipment_type.description">
+				<source>Type of shipment provided</source>
+			</trans-unit>
+			<trans-unit id="payment.description">
+				<source>Type of payment accepted</source>
+			</trans-unit>
 			<trans-unit id="has_category.description">
 				<source>The category the ad belongs to </source>
+			</trans-unit>
+			<trans-unit id="has_country.description">
+				<source>Country of the ad</source>
+			</trans-unit>
+			<trans-unit id="user_created.description">
+				<source>User who created the ad</source>
 			</trans-unit>
 		</body>
 	</file>

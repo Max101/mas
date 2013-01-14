@@ -88,12 +88,157 @@ class MasAdTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
 	/**
 	 * @test
 	 */
+	public function getImagesReturnsInitialValueForString() { }
+
+	/**
+	 * @test
+	 */
+	public function setImagesForStringSetsImages() { 
+		$this->fixture->setImages('Conceived at T3CON10');
+
+		$this->assertSame(
+			'Conceived at T3CON10',
+			$this->fixture->getImages()
+		);
+	}
+	
+	/**
+	 * @test
+	 */
+	public function getPriceReturnsInitialValueForFloat() { 
+		$this->assertSame(
+			0.0,
+			$this->fixture->getPrice()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setPriceForFloatSetsPrice() { 
+		$this->fixture->setPrice(3.14159265);
+
+		$this->assertSame(
+			3.14159265,
+			$this->fixture->getPrice()
+		);
+	}
+	
+	/**
+	 * @test
+	 */
+	public function getNewPriceReturnsInitialValueForFloat() { 
+		$this->assertSame(
+			0.0,
+			$this->fixture->getNewPrice()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setNewPriceForFloatSetsNewPrice() { 
+		$this->fixture->setNewPrice(3.14159265);
+
+		$this->assertSame(
+			3.14159265,
+			$this->fixture->getNewPrice()
+		);
+	}
+	
+	/**
+	 * @test
+	 */
+	public function getManualReturnsInitialValueForOolean() { }
+
+	/**
+	 * @test
+	 */
+	public function setManualForOoleanSetsManual() { }
+	
+	/**
+	 * @test
+	 */
+	public function getRemoteReturnsInitialValueForOolean() { }
+
+	/**
+	 * @test
+	 */
+	public function setRemoteForOoleanSetsRemote() { }
+	
+	/**
+	 * @test
+	 */
+	public function getShipmentTypeReturnsInitialValueForInteger() { 
+		$this->assertSame(
+			0,
+			$this->fixture->getShipmentType()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setShipmentTypeForIntegerSetsShipmentType() { 
+		$this->fixture->setShipmentType(12);
+
+		$this->assertSame(
+			12,
+			$this->fixture->getShipmentType()
+		);
+	}
+	
+	/**
+	 * @test
+	 */
+	public function getPaymentReturnsInitialValueForInteger() { 
+		$this->assertSame(
+			0,
+			$this->fixture->getPayment()
+		);
+	}
+
+	/**
+	 * @test
+	 */
+	public function setPaymentForIntegerSetsPayment() { 
+		$this->fixture->setPayment(12);
+
+		$this->assertSame(
+			12,
+			$this->fixture->getPayment()
+		);
+	}
+	
+	/**
+	 * @test
+	 */
 	public function getHasCategoryReturnsInitialValueForCategory() { }
 
 	/**
 	 * @test
 	 */
 	public function setHasCategoryForCategorySetsHasCategory() { }
+	
+	/**
+	 * @test
+	 */
+	public function getHasCountryReturnsInitialValueForCountry() { }
+
+	/**
+	 * @test
+	 */
+	public function setHasCountryForCountrySetsHasCountry() { }
+	
+	/**
+	 * @test
+	 */
+	public function getUserCreatedReturnsInitialValueFor() { }
+
+	/**
+	 * @test
+	 */
+	public function setUserCreatedForSetsUserCreated() { }
 	
 }
 ?>
