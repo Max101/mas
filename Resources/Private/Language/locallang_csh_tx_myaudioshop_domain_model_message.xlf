@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-01-16T22:54:10Z" product-name="myaudioshop">
+		<header/>
+		<body>
+
+			<trans-unit id="title.description">
+				<source>Message title</source>
+			</trans-unit>
+			<trans-unit id="content.description">
+				<source>The actual message</source>
+			</trans-unit>
+			<trans-unit id="sender.description">
+				<source>sender</source>
+			</trans-unit>
+			<trans-unit id="receiver.description">
+				<source>receiver</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

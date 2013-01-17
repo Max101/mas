@@ -101,25 +101,46 @@ class MasAd extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $payment;
 
 	/**
+	 * Type of payment accepted
+	 *
+	 * @var \integer
+	 */
+	protected $views;
+
+	/**
+	 * weight
+	 *
+	 * @var \float
+	 */
+	protected $weight;
+
+	/**
 	 * The category the ad belongs to
 	 *
 	 * @var \TYPO3\Myaudioshop\Domain\Model\Category
 	 */
-	protected $hasCategory;
+	protected $category;
 
 	/**
 	 * Country of the ad
 	 *
 	 * @var \TYPO3\Myaudioshop\Domain\Model\Country
 	 */
-	protected $hasCountry;
+	protected $location;
 
 	/**
 	 * User who created the ad
 	 *
-	 * @var
+	 * @var \TYPO3\Myaudioshop\Domain\Model\User
 	 */
-	protected $userCreated;
+	protected $user;
+
+	/**
+	 * Product brand
+	 *
+	 * @var \TYPO3\Myaudioshop\Domain\Model\Brand
+	 */
+	protected $brand;
 
 	/**
 	 * Returns the name
@@ -157,25 +178,6 @@ class MasAd extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setDescription($description) {
 		$this->description = $description;
-	}
-
-	/**
-	 * Returns the hasCategory
-	 *
-	 * @return \TYPO3\Myaudioshop\Domain\Model\Category $hasCategory
-	 */
-	public function getHasCategory() {
-		return $this->hasCategory;
-	}
-
-	/**
-	 * Sets the hasCategory
-	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Category $hasCategory
-	 * @return void
-	 */
-	public function setHasCategory(\TYPO3\Myaudioshop\Domain\Model\Category $hasCategory) {
-		$this->hasCategory = $hasCategory;
 	}
 
 	/**
@@ -292,25 +294,6 @@ class MasAd extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	}
 
 	/**
-	 * Returns the hasCountry
-	 *
-	 * @return \TYPO3\Myaudioshop\Domain\Model\Country hasCountry
-	 */
-	public function getHasCountry() {
-		return $this->hasCountry;
-	}
-
-	/**
-	 * Sets the hasCountry
-	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Country $hasCountry
-	 * @return \TYPO3\Myaudioshop\Domain\Model\Country hasCountry
-	 */
-	public function setHasCountry(\TYPO3\Myaudioshop\Domain\Model\Country $hasCountry) {
-		$this->hasCountry = $hasCountry;
-	}
-
-	/**
 	 * Returns the images
 	 *
 	 * @return \string $images
@@ -349,22 +332,117 @@ class MasAd extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	}
 
 	/**
-	 * Returns the userCreated
+	 * Returns the category
 	 *
-	 * @return  userCreated
+	 * @return \TYPO3\Myaudioshop\Domain\Model\Category category
 	 */
-	public function getUserCreated() {
-		return $this->userCreated;
+	public function getCategory() {
+		return $this->category;
 	}
 
 	/**
-	 * Sets the userCreated
+	 * Sets the category
 	 *
-	 * @param  $userCreated
-	 * @return  userCreated
+	 * @param \TYPO3\Myaudioshop\Domain\Model\Category $category
+	 * @return \TYPO3\Myaudioshop\Domain\Model\Category category
 	 */
-	public function setUserCreated($userCreated) {
-		$this->userCreated = $userCreated;
+	public function setCategory(\TYPO3\Myaudioshop\Domain\Model\Category $category) {
+		$this->category = $category;
+	}
+
+	/**
+	 * Returns the user
+	 *
+	 * @return \TYPO3\Myaudioshop\Domain\Model\User user
+	 */
+	public function getUser() {
+		return $this->user;
+	}
+
+	/**
+	 * Sets the user
+	 *
+	 * @param \TYPO3\Myaudioshop\Domain\Model\User $user
+	 * @return \TYPO3\Myaudioshop\Domain\Model\User user
+	 */
+	public function setUser($user) {
+		$this->user = $user;
+	}
+
+	/**
+	 * Returns the brand
+	 *
+	 * @return \TYPO3\Myaudioshop\Domain\Model\Brand $brand
+	 */
+	public function getBrand() {
+		return $this->brand;
+	}
+
+	/**
+	 * Sets the brand
+	 *
+	 * @param \TYPO3\Myaudioshop\Domain\Model\Brand $brand
+	 * @return void
+	 */
+	public function setBrand(\TYPO3\Myaudioshop\Domain\Model\Brand $brand) {
+		$this->brand = $brand;
+	}
+
+	/**
+	 * Returns the views
+	 *
+	 * @return \integer $views
+	 */
+	public function getViews() {
+		return $this->views;
+	}
+
+	/**
+	 * Sets the views
+	 *
+	 * @param \integer $views
+	 * @return void
+	 */
+	public function setViews($views) {
+		$this->views = $views;
+	}
+
+	/**
+	 * Returns the location
+	 *
+	 * @return \TYPO3\Myaudioshop\Domain\Model\Country location
+	 */
+	public function getLocation() {
+		return $this->location;
+	}
+
+	/**
+	 * Sets the location
+	 *
+	 * @param \TYPO3\Myaudioshop\Domain\Model\Country $location
+	 * @return \TYPO3\Myaudioshop\Domain\Model\Country location
+	 */
+	public function setLocation(\TYPO3\Myaudioshop\Domain\Model\Country $location) {
+		$this->location = $location;
+	}
+
+	/**
+	 * Returns the weight
+	 *
+	 * @return \float $weight
+	 */
+	public function getWeight() {
+		return $this->weight;
+	}
+
+	/**
+	 * Sets the weight
+	 *
+	 * @param \float $weight
+	 * @return void
+	 */
+	public function setWeight($weight) {
+		$this->weight = $weight;
 	}
 
 }

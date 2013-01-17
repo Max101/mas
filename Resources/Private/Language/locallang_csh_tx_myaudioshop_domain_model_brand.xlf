@@ -4,6 +4,9 @@
 		<header/>
 		<body>
 
+			<trans-unit id="name.description">
+				<source>Brand name</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

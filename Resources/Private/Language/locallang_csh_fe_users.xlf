@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2013-01-14T21:39:56Z" product-name="myaudioshop">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-01-16T22:54:10Z" product-name="myaudioshop">
 		<header/>
 		<body>
 
+			<trans-unit id="favorite_user.description">
+				<source>favoriteUser</source>
+			</trans-unit>
+			<trans-unit id="favorite_ad.description">
+				<source>favoriteAd</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

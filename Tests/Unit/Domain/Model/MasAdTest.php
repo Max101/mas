@@ -213,32 +213,86 @@ class MasAdTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
 	/**
 	 * @test
 	 */
-	public function getHasCategoryReturnsInitialValueForCategory() { }
+	public function getViewsReturnsInitialValueForInteger() { 
+		$this->assertSame(
+			0,
+			$this->fixture->getViews()
+		);
+	}
 
 	/**
 	 * @test
 	 */
-	public function setHasCategoryForCategorySetsHasCategory() { }
+	public function setViewsForIntegerSetsViews() { 
+		$this->fixture->setViews(12);
+
+		$this->assertSame(
+			12,
+			$this->fixture->getViews()
+		);
+	}
 	
 	/**
 	 * @test
 	 */
-	public function getHasCountryReturnsInitialValueForCountry() { }
+	public function getWeightReturnsInitialValueForFloat() { 
+		$this->assertSame(
+			0.0,
+			$this->fixture->getWeight()
+		);
+	}
 
 	/**
 	 * @test
 	 */
-	public function setHasCountryForCountrySetsHasCountry() { }
+	public function setWeightForFloatSetsWeight() { 
+		$this->fixture->setWeight(3.14159265);
+
+		$this->assertSame(
+			3.14159265,
+			$this->fixture->getWeight()
+		);
+	}
 	
 	/**
 	 * @test
 	 */
-	public function getUserCreatedReturnsInitialValueFor() { }
+	public function getCategoryReturnsInitialValueForCategory() { }
 
 	/**
 	 * @test
 	 */
-	public function setUserCreatedForSetsUserCreated() { }
+	public function setCategoryForCategorySetsCategory() { }
+	
+	/**
+	 * @test
+	 */
+	public function getLocationReturnsInitialValueForCountry() { }
+
+	/**
+	 * @test
+	 */
+	public function setLocationForCountrySetsLocation() { }
+	
+	/**
+	 * @test
+	 */
+	public function getUserReturnsInitialValueForUser() { }
+
+	/**
+	 * @test
+	 */
+	public function setUserForUserSetsUser() { }
+	
+	/**
+	 * @test
+	 */
+	public function getBrandReturnsInitialValueForBrand() { }
+
+	/**
+	 * @test
+	 */
+	public function setBrandForBrandSetsBrand() { }
 	
 }
 ?>

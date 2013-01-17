@@ -4,6 +4,9 @@
 		<header/>
 		<body>
 
+			<trans-unit id="product.description">
+				<source>product</source>
+			</trans-unit>
 		</body>
 	</file>
 </xliff>

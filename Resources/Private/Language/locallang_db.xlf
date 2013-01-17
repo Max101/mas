@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2013-01-14T22:25:58Z" product-name="myaudioshop">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-01-16T22:54:09Z" product-name="myaudioshop">
 		<header/>
 		<body>
 
@@ -34,14 +34,23 @@
 			<trans-unit id="tx_myaudioshop_domain_model_masad.payment">
 				<source>Payment</source>
 			</trans-unit>
-			<trans-unit id="tx_myaudioshop_domain_model_masad.has_category">
-				<source>Has Category</source>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.views">
+				<source>Views</source>
 			</trans-unit>
-			<trans-unit id="tx_myaudioshop_domain_model_masad.has_country">
-				<source>Has Country</source>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.weight">
+				<source>Weight</source>
 			</trans-unit>
-			<trans-unit id="tx_myaudioshop_domain_model_masad.user_created">
-				<source>User Created</source>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.category">
+				<source>Category</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.location">
+				<source>Location</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.user">
+				<source>User</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.brand">
+				<source>Brand</source>
 			</trans-unit>
 
 			<trans-unit id="tx_myaudioshop_domain_model_category">
@@ -62,6 +71,72 @@
 				<source>MyAudioShop Country</source>
 			</trans-unit>
 			
+			<trans-unit id="tx_myaudioshop_domain_model_user">
+				<source>User</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_user.favorite_user">
+				<source>Favorite User</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_user.favorite_ad">
+				<source>Favorite Ad</source>
+			</trans-unit>
+			
+			<trans-unit id="fe_users.tx_extbase_type.Tx_Myaudioshop_User">
+				<source>MyAudioShop User</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_myaudioshop_domain_model_feedback">
+				<source>Feedback</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_feedback.type">
+				<source>Type</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_feedback.rating">
+				<source>Rating</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_feedback.message">
+				<source>Message</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_feedback.giver">
+				<source>Giver</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_feedback.receiver">
+				<source>Receiver</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_feedback.mas_ad">
+				<source>Mas Ad</source>
+			</trans-unit>
+
+			<trans-unit id="tx_myaudioshop_domain_model_message">
+				<source>Message</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_message.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_message.content">
+				<source>Content</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_message.sender">
+				<source>Sender</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_message.receiver">
+				<source>Receiver</source>
+			</trans-unit>
+
+			<trans-unit id="tx_myaudioshop_domain_model_brand">
+				<source>Brand</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_brand.name">
+				<source>Name</source>
+			</trans-unit>
+
+			<trans-unit id="tx_myaudioshop_domain_model_question">
+				<source>Question</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_question.product">
+				<source>Product</source>
+			</trans-unit>
+
 		</body>
 	</file>
 </xliff>

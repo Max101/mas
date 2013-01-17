@@ -6,10 +6,10 @@ if (!defined ('TYPO3_MODE')) {
 $TCA['tx_myaudioshop_domain_model_masad'] = array(
 	'ctrl' => $TCA['tx_myaudioshop_domain_model_masad']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, images, price, new_price, manual, remote, shipment_type, payment, has_category, has_country, user_created',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, images, price, new_price, manual, remote, shipment_type, payment, views, weight, category, location, user, brand',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name, description, images, price, new_price, manual, remote, shipment_type, payment, has_category, has_country, user_created,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name, description, images, price, new_price, manual, remote, shipment_type, payment, views, weight, category, location, user, brand,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -196,9 +196,27 @@ $TCA['tx_myaudioshop_domain_model_masad'] = array(
 				'eval' => ''
 			),
 		),
-		'has_category' => array(
+		'views' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_masad.has_category',
+			'label' => 'LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_masad.views',
+			'config' => array(
+				'type' => 'input',
+				'size' => 4,
+				'eval' => 'int'
+			),
+		),
+		'weight' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_masad.weight',
+			'config' => array(
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'double2'
+			),
+		),
+		'category' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_masad.category',
 			'config' => array(
 				'type' => 'select',
 				'foreign_table' => 'tx_myaudioshop_domain_model_category',
@@ -206,9 +224,9 @@ $TCA['tx_myaudioshop_domain_model_masad'] = array(
 				'maxitems' => 1,
 			),
 		),
-		'has_country' => array(
+		'location' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_masad.has_country',
+			'label' => 'LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_masad.location',
 			'config' => array(
 				'type' => 'select',
 				'foreign_table' => 'static_countries',
@@ -216,12 +234,22 @@ $TCA['tx_myaudioshop_domain_model_masad'] = array(
 				'maxitems' => 1,
 			),
 		),
-		'user_created' => array(
+		'user' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_masad.user_created',
+			'label' => 'LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_masad.user',
 			'config' => array(
 				'type' => 'select',
-				'foreign_table' => '',
+				'foreign_table' => 'fe_users',
+				'minitems' => 0,
+				'maxitems' => 1,
+			),
+		),
+		'brand' => array(
+			'exclude' => 0,
+			'label' => 'LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_masad.brand',
+			'config' => array(
+				'type' => 'select',
+				'foreign_table' => 'tx_myaudioshop_domain_model_brand',
 				'minitems' => 0,
 				'maxitems' => 1,
 			),

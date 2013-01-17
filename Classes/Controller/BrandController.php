@@ -32,7 +32,7 @@ namespace TYPO3\Myaudioshop\Controller;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
+class BrandController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController {
 
 	/**
 	 * action list
@@ -40,74 +40,74 @@ class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	 * @return void
 	 */
 	public function listAction() {
-		$categories = $this->categoryRepository->findAll();
-		$this->view->assign('categories', $categories);
+		$brands = $this->brandRepository->findAll();
+		$this->view->assign('brands', $brands);
 	}
 
 	/**
 	 * action show
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Category $category
+	 * @param \TYPO3\Myaudioshop\Domain\Model\Brand $brand
 	 * @return void
 	 */
-	public function showAction(\TYPO3\Myaudioshop\Domain\Model\Category $category) {
-		$this->view->assign('category', $category);
+	public function showAction(\TYPO3\Myaudioshop\Domain\Model\Brand $brand) {
+		$this->view->assign('brand', $brand);
 	}
 
 	/**
 	 * action new
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Category $newCategory
-	 * @dontvalidate $newCategory
+	 * @param \TYPO3\Myaudioshop\Domain\Model\Brand $newBrand
+	 * @dontvalidate $newBrand
 	 * @return void
 	 */
-	public function newAction(\TYPO3\Myaudioshop\Domain\Model\Category $newCategory = NULL) {
-		$this->view->assign('newCategory', $newCategory);
+	public function newAction(\TYPO3\Myaudioshop\Domain\Model\Brand $newBrand = NULL) {
+		$this->view->assign('newBrand', $newBrand);
 	}
 
 	/**
 	 * action create
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Category $newCategory
+	 * @param \TYPO3\Myaudioshop\Domain\Model\Brand $newBrand
 	 * @return void
 	 */
-	public function createAction(\TYPO3\Myaudioshop\Domain\Model\Category $newCategory) {
-		$this->categoryRepository->add($newCategory);
-		$this->flashMessageContainer->add('Your new Category was created.');
+	public function createAction(\TYPO3\Myaudioshop\Domain\Model\Brand $newBrand) {
+		$this->brandRepository->add($newBrand);
+		$this->flashMessageContainer->add('Your new Brand was created.');
 		$this->redirect('list');
 	}
 
 	/**
 	 * action edit
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Category $category
+	 * @param \TYPO3\Myaudioshop\Domain\Model\Brand $brand
 	 * @return void
 	 */
-	public function editAction(\TYPO3\Myaudioshop\Domain\Model\Category $category) {
-		$this->view->assign('category', $category);
+	public function editAction(\TYPO3\Myaudioshop\Domain\Model\Brand $brand) {
+		$this->view->assign('brand', $brand);
 	}
 
 	/**
 	 * action update
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Category $category
+	 * @param \TYPO3\Myaudioshop\Domain\Model\Brand $brand
 	 * @return void
 	 */
-	public function updateAction(\TYPO3\Myaudioshop\Domain\Model\Category $category) {
-		$this->categoryRepository->update($category);
-		$this->flashMessageContainer->add('Your Category was updated.');
+	public function updateAction(\TYPO3\Myaudioshop\Domain\Model\Brand $brand) {
+		$this->brandRepository->update($brand);
+		$this->flashMessageContainer->add('Your Brand was updated.');
 		$this->redirect('list');
 	}
 
 	/**
 	 * action delete
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Category $category
+	 * @param \TYPO3\Myaudioshop\Domain\Model\Brand $brand
 	 * @return void
 	 */
-	public function deleteAction(\TYPO3\Myaudioshop\Domain\Model\Category $category) {
-		$this->categoryRepository->remove($category);
-		$this->flashMessageContainer->add('Your Category was removed.');
+	public function deleteAction(\TYPO3\Myaudioshop\Domain\Model\Brand $brand) {
+		$this->brandRepository->remove($brand);
+		$this->flashMessageContainer->add('Your Brand was removed.');
 		$this->redirect('list');
 	}
 
