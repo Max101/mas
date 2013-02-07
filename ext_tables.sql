@@ -107,6 +107,7 @@ CREATE TABLE fe_users (
 
 	favorite_user int(11) unsigned DEFAULT '0' NOT NULL,
 	favorite_ad int(11) unsigned DEFAULT '0' NOT NULL,
+	country int(11) unsigned DEFAULT '0',
 
 );
 
@@ -303,3 +304,4 @@ CREATE TABLE tx_myaudioshop_user_masad_mm (
 	KEY uid_local (uid_local),
 	KEY uid_foreign (uid_foreign)
 );
+## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder

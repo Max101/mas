@@ -1,5 +1,5 @@
 <?php
-namespace TYPO3\Myaudioshop\Domain\Repository;
+namespace MORLIC\Myaudioshop\Domain\Repository;
 
 /***************************************************************
  *  Copyright notice

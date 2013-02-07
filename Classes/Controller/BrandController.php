@@ -1,5 +1,5 @@
 <?php
-namespace TYPO3\Myaudioshop\Controller;
+namespace MORLIC\Myaudioshop\Controller;
 
 /***************************************************************
  *  Copyright notice
@@ -47,31 +47,31 @@ class BrandController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	/**
 	 * action show
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Brand $brand
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Brand $brand
 	 * @return void
 	 */
-	public function showAction(\TYPO3\Myaudioshop\Domain\Model\Brand $brand) {
+	public function showAction(\MORLIC\Myaudioshop\Domain\Model\Brand $brand) {
 		$this->view->assign('brand', $brand);
 	}
 
 	/**
 	 * action new
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Brand $newBrand
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Brand $newBrand
 	 * @dontvalidate $newBrand
 	 * @return void
 	 */
-	public function newAction(\TYPO3\Myaudioshop\Domain\Model\Brand $newBrand = NULL) {
+	public function newAction(\MORLIC\Myaudioshop\Domain\Model\Brand $newBrand = NULL) {
 		$this->view->assign('newBrand', $newBrand);
 	}
 
 	/**
 	 * action create
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Brand $newBrand
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Brand $newBrand
 	 * @return void
 	 */
-	public function createAction(\TYPO3\Myaudioshop\Domain\Model\Brand $newBrand) {
+	public function createAction(\MORLIC\Myaudioshop\Domain\Model\Brand $newBrand) {
 		$this->brandRepository->add($newBrand);
 		$this->flashMessageContainer->add('Your new Brand was created.');
 		$this->redirect('list');
@@ -80,20 +80,20 @@ class BrandController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	/**
 	 * action edit
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Brand $brand
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Brand $brand
 	 * @return void
 	 */
-	public function editAction(\TYPO3\Myaudioshop\Domain\Model\Brand $brand) {
+	public function editAction(\MORLIC\Myaudioshop\Domain\Model\Brand $brand) {
 		$this->view->assign('brand', $brand);
 	}
 
 	/**
 	 * action update
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Brand $brand
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Brand $brand
 	 * @return void
 	 */
-	public function updateAction(\TYPO3\Myaudioshop\Domain\Model\Brand $brand) {
+	public function updateAction(\MORLIC\Myaudioshop\Domain\Model\Brand $brand) {
 		$this->brandRepository->update($brand);
 		$this->flashMessageContainer->add('Your Brand was updated.');
 		$this->redirect('list');
@@ -102,10 +102,10 @@ class BrandController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	/**
 	 * action delete
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Brand $brand
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Brand $brand
 	 * @return void
 	 */
-	public function deleteAction(\TYPO3\Myaudioshop\Domain\Model\Brand $brand) {
+	public function deleteAction(\MORLIC\Myaudioshop\Domain\Model\Brand $brand) {
 		$this->brandRepository->remove($brand);
 		$this->flashMessageContainer->add('Your Brand was removed.');
 		$this->redirect('list');

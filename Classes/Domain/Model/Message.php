@@ -1,5 +1,5 @@
 <?php
-namespace TYPO3\Myaudioshop\Domain\Model;
+namespace MORLIC\Myaudioshop\Domain\Model;
 
 /***************************************************************
  *  Copyright notice
@@ -51,14 +51,14 @@ class Message extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * sender
 	 *
-	 * @var \TYPO3\Myaudioshop\Domain\Model\User
+	 * @var \MORLIC\Myaudioshop\Domain\Model\User
 	 */
 	protected $sender;
 
 	/**
 	 * receiver
 	 *
-	 * @var \TYPO3\Myaudioshop\Domain\Model\User
+	 * @var \MORLIC\Myaudioshop\Domain\Model\User
 	 */
 	protected $receiver;
 
@@ -103,7 +103,7 @@ class Message extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Returns the sender
 	 *
-	 * @return \TYPO3\Myaudioshop\Domain\Model\User $sender
+	 * @return \MORLIC\Myaudioshop\Domain\Model\User $sender
 	 */
 	public function getSender() {
 		return $this->sender;
@@ -112,17 +112,17 @@ class Message extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the sender
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\User $sender
+	 * @param \MORLIC\Myaudioshop\Domain\Model\User $sender
 	 * @return void
 	 */
-	public function setSender(\TYPO3\Myaudioshop\Domain\Model\User $sender) {
+	public function setSender(\MORLIC\Myaudioshop\Domain\Model\User $sender) {
 		$this->sender = $sender;
 	}
 
 	/**
 	 * Returns the receiver
 	 *
-	 * @return \TYPO3\Myaudioshop\Domain\Model\User $receiver
+	 * @return \MORLIC\Myaudioshop\Domain\Model\User $receiver
 	 */
 	public function getReceiver() {
 		return $this->receiver;
@@ -131,10 +131,10 @@ class Message extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the receiver
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\User $receiver
+	 * @param \MORLIC\Myaudioshop\Domain\Model\User $receiver
 	 * @return void
 	 */
-	public function setReceiver(\TYPO3\Myaudioshop\Domain\Model\User $receiver) {
+	public function setReceiver(\MORLIC\Myaudioshop\Domain\Model\User $receiver) {
 		$this->receiver = $receiver;
 	}
 

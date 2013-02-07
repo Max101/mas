@@ -1,5 +1,5 @@
 <?php
-namespace TYPO3\Myaudioshop\Domain\Model;
+namespace MORLIC\Myaudioshop\Domain\Model;
 
 /***************************************************************
  *  Copyright notice
@@ -37,16 +37,23 @@ class User extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * favoriteUser
 	 *
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\Myaudioshop\Domain\Model\User>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\MORLIC\Myaudioshop\Domain\Model\User>
 	 */
 	protected $favoriteUser;
 
 	/**
 	 * favoriteAd
 	 *
-	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\Myaudioshop\Domain\Model\MasAd>
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\MORLIC\Myaudioshop\Domain\Model\MasAd>
 	 */
 	protected $favoriteAd;
+
+	/**
+	 * country
+	 *
+	 * @var \MORLIC\Myaudioshop\Domain\Model\Country
+	 */
+	protected $country;
 
 	/**
 	 * __construct
@@ -77,27 +84,27 @@ class User extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Adds a User
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\User $favoriteUser
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\Myaudioshop\Domain\Model\User> favoriteUser
+	 * @param \MORLIC\Myaudioshop\Domain\Model\User $favoriteUser
+	 * @return void
 	 */
-	public function addFavoriteUser(\TYPO3\Myaudioshop\Domain\Model\User $favoriteUser) {
+	public function addFavoriteUser(\MORLIC\Myaudioshop\Domain\Model\User $favoriteUser) {
 		$this->favoriteUser->attach($favoriteUser);
 	}
 
 	/**
 	 * Removes a User
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\User $favoriteUserToRemove The User to be removed
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\Myaudioshop\Domain\Model\User> favoriteUser
+	 * @param \MORLIC\Myaudioshop\Domain\Model\User $favoriteUserToRemove The User to be removed
+	 * @return void
 	 */
-	public function removeFavoriteUser(\TYPO3\Myaudioshop\Domain\Model\User $favoriteUserToRemove) {
+	public function removeFavoriteUser(\MORLIC\Myaudioshop\Domain\Model\User $favoriteUserToRemove) {
 		$this->favoriteUser->detach($favoriteUserToRemove);
 	}
 
 	/**
 	 * Returns the favoriteUser
 	 *
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\Myaudioshop\Domain\Model\User> favoriteUser
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\MORLIC\Myaudioshop\Domain\Model\User> $favoriteUser
 	 */
 	public function getFavoriteUser() {
 		return $this->favoriteUser;
@@ -106,8 +113,8 @@ class User extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the favoriteUser
 	 *
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\Myaudioshop\Domain\Model\User> $favoriteUser
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\Myaudioshop\Domain\Model\User> favoriteUser
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\MORLIC\Myaudioshop\Domain\Model\User> $favoriteUser
+	 * @return void
 	 */
 	public function setFavoriteUser(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $favoriteUser) {
 		$this->favoriteUser = $favoriteUser;
@@ -116,27 +123,27 @@ class User extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Adds a MasAd
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\MasAd $favoriteAd
+	 * @param \MORLIC\Myaudioshop\Domain\Model\MasAd $favoriteAd
 	 * @return void
 	 */
-	public function addFavoriteAd(\TYPO3\Myaudioshop\Domain\Model\MasAd $favoriteAd) {
+	public function addFavoriteAd(\MORLIC\Myaudioshop\Domain\Model\MasAd $favoriteAd) {
 		$this->favoriteAd->attach($favoriteAd);
 	}
 
 	/**
 	 * Removes a MasAd
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\MasAd $favoriteAdToRemove The MasAd to be removed
+	 * @param \MORLIC\Myaudioshop\Domain\Model\MasAd $favoriteAdToRemove The MasAd to be removed
 	 * @return void
 	 */
-	public function removeFavoriteAd(\TYPO3\Myaudioshop\Domain\Model\MasAd $favoriteAdToRemove) {
+	public function removeFavoriteAd(\MORLIC\Myaudioshop\Domain\Model\MasAd $favoriteAdToRemove) {
 		$this->favoriteAd->detach($favoriteAdToRemove);
 	}
 
 	/**
 	 * Returns the favoriteAd
 	 *
-	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\Myaudioshop\Domain\Model\MasAd> $favoriteAd
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\MORLIC\Myaudioshop\Domain\Model\MasAd> $favoriteAd
 	 */
 	public function getFavoriteAd() {
 		return $this->favoriteAd;
@@ -145,11 +152,30 @@ class User extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the favoriteAd
 	 *
-	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\TYPO3\Myaudioshop\Domain\Model\MasAd> $favoriteAd
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\MORLIC\Myaudioshop\Domain\Model\MasAd> $favoriteAd
 	 * @return void
 	 */
 	public function setFavoriteAd(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $favoriteAd) {
 		$this->favoriteAd = $favoriteAd;
+	}
+
+	/**
+	 * Returns the country
+	 *
+	 * @return \MORLIC\Myaudioshop\Domain\Model\Country $country
+	 */
+	public function getCountry() {
+		return $this->country;
+	}
+
+	/**
+	 * Sets the country
+	 *
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Country $country
+	 * @return void
+	 */
+	public function setCountry(\MORLIC\Myaudioshop\Domain\Model\Country $country) {
+		$this->country = $country;
 	}
 
 }

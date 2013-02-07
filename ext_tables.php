@@ -155,6 +155,16 @@ $tmp_myaudioshop_columns = array(
 			),
 		),
 	),
+	'country' => array(
+		'exclude' => 0,
+		'label' => 'LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_user.country',
+		'config' => array(
+			'type' => 'select',
+			'foreign_table' => 'static_countries',
+			'minitems' => 0,
+			'maxitems' => 1,
+		),
+	),
 );
 
 t3lib_extMgm::addTCAcolumns('fe_users',$tmp_myaudioshop_columns);
@@ -163,7 +173,7 @@ $TCA['fe_users']['columns'][$TCA['fe_users']['ctrl']['type']]['config']['items']
 
 $TCA['fe_users']['types']['Tx_Myaudioshop_User']['showitem'] = $TCA['fe_users']['types']['1']['showitem'];
 $TCA['fe_users']['types']['Tx_Myaudioshop_User']['showitem'] .= ',--div--;LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_user,';
-$TCA['fe_users']['types']['Tx_Myaudioshop_User']['showitem'] .= 'favorite_user, favorite_ad';
+$TCA['fe_users']['types']['Tx_Myaudioshop_User']['showitem'] .= 'favorite_user, favorite_ad, country';
 
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_myaudioshop_domain_model_feedback', 'EXT:myaudioshop/Resources/Private/Language/locallang_csh_tx_myaudioshop_domain_model_feedback.xlf');
 \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_myaudioshop_domain_model_feedback');
@@ -281,4 +291,15 @@ $TCA['tx_myaudioshop_domain_model_question'] = array(
 	),
 );
 
+## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
+//var_export($TCA['fe_users']['columns']);die();
+//\TYPO3\CMS\Core\Utility\DebugUtility::debug($TCA['fe_users']['columns']);die();
+/*
+t3lib_div::loadTCA('fe_users');
+if (is_array($TCA['fe_users']['columns']['tx_extbase_type'])) {
+	$TCA['fe_users']['types']['Tx_BlogExample_Domain_Model_Administrator'] = $TCA['fe_users']['types']['0'];
+	array_push($TCA['fe_users']['columns']['tx_extbase_type']['config']['items'], array('LLL:EXT:blog_example/Resources/Private/Language/locallang_db.xml:fe_users.tx_extbase_type.Tx_BlogExample_Domain_Model_Administrator', 'Tx_BlogExample_Domain_Model_Administrator'));
+}
+
+*/
 ?>

@@ -1,5 +1,5 @@
 <?php
-namespace TYPO3\Myaudioshop\Domain\Model;
+namespace MORLIC\Myaudioshop\Domain\Model;
 
 /***************************************************************
  *  Copyright notice
@@ -117,28 +117,28 @@ class MasAd extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * The category the ad belongs to
 	 *
-	 * @var \TYPO3\Myaudioshop\Domain\Model\Category
+	 * @var \MORLIC\Myaudioshop\Domain\Model\Category
 	 */
 	protected $category;
 
 	/**
 	 * Country of the ad
 	 *
-	 * @var \TYPO3\Myaudioshop\Domain\Model\Country
+	 * @var \MORLIC\Myaudioshop\Domain\Model\Country
 	 */
 	protected $location;
 
 	/**
 	 * User who created the ad
 	 *
-	 * @var \TYPO3\Myaudioshop\Domain\Model\User
+	 * @var \MORLIC\Myaudioshop\Domain\Model\User
 	 */
 	protected $user;
 
 	/**
 	 * Product brand
 	 *
-	 * @var \TYPO3\Myaudioshop\Domain\Model\Brand
+	 * @var \MORLIC\Myaudioshop\Domain\Model\Brand
 	 */
 	protected $brand;
 
@@ -178,6 +178,25 @@ class MasAd extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setDescription($description) {
 		$this->description = $description;
+	}
+
+	/**
+	 * Returns the images
+	 *
+	 * @return \string $images
+	 */
+	public function getImages() {
+		return $this->images;
+	}
+
+	/**
+	 * Sets the images
+	 *
+	 * @param \string $images
+	 * @return void
+	 */
+	public function setImages($images) {
+		$this->images = $images;
 	}
 
 	/**
@@ -294,25 +313,6 @@ class MasAd extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	}
 
 	/**
-	 * Returns the images
-	 *
-	 * @return \string $images
-	 */
-	public function getImages() {
-		return $this->images;
-	}
-
-	/**
-	 * Sets the images
-	 *
-	 * @param \string $images
-	 * @return void
-	 */
-	public function setImages($images) {
-		$this->images = $images;
-	}
-
-	/**
 	 * Returns the payment
 	 *
 	 * @return \integer $payment
@@ -329,63 +329,6 @@ class MasAd extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setPayment($payment) {
 		$this->payment = $payment;
-	}
-
-	/**
-	 * Returns the category
-	 *
-	 * @return \TYPO3\Myaudioshop\Domain\Model\Category category
-	 */
-	public function getCategory() {
-		return $this->category;
-	}
-
-	/**
-	 * Sets the category
-	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Category $category
-	 * @return \TYPO3\Myaudioshop\Domain\Model\Category category
-	 */
-	public function setCategory(\TYPO3\Myaudioshop\Domain\Model\Category $category) {
-		$this->category = $category;
-	}
-
-	/**
-	 * Returns the user
-	 *
-	 * @return \TYPO3\Myaudioshop\Domain\Model\User user
-	 */
-	public function getUser() {
-		return $this->user;
-	}
-
-	/**
-	 * Sets the user
-	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\User $user
-	 * @return \TYPO3\Myaudioshop\Domain\Model\User user
-	 */
-	public function setUser($user) {
-		$this->user = $user;
-	}
-
-	/**
-	 * Returns the brand
-	 *
-	 * @return \TYPO3\Myaudioshop\Domain\Model\Brand $brand
-	 */
-	public function getBrand() {
-		return $this->brand;
-	}
-
-	/**
-	 * Sets the brand
-	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Brand $brand
-	 * @return void
-	 */
-	public function setBrand(\TYPO3\Myaudioshop\Domain\Model\Brand $brand) {
-		$this->brand = $brand;
 	}
 
 	/**
@@ -408,25 +351,6 @@ class MasAd extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	}
 
 	/**
-	 * Returns the location
-	 *
-	 * @return \TYPO3\Myaudioshop\Domain\Model\Country location
-	 */
-	public function getLocation() {
-		return $this->location;
-	}
-
-	/**
-	 * Sets the location
-	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Country $location
-	 * @return \TYPO3\Myaudioshop\Domain\Model\Country location
-	 */
-	public function setLocation(\TYPO3\Myaudioshop\Domain\Model\Country $location) {
-		$this->location = $location;
-	}
-
-	/**
 	 * Returns the weight
 	 *
 	 * @return \float $weight
@@ -443,6 +367,82 @@ class MasAd extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setWeight($weight) {
 		$this->weight = $weight;
+	}
+
+	/**
+	 * Returns the category
+	 *
+	 * @return \MORLIC\Myaudioshop\Domain\Model\Category $category
+	 */
+	public function getCategory() {
+		return $this->category;
+	}
+
+	/**
+	 * Sets the category
+	 *
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Category $category
+	 * @return void
+	 */
+	public function setCategory(\MORLIC\Myaudioshop\Domain\Model\Category $category) {
+		$this->category = $category;
+	}
+
+	/**
+	 * Returns the location
+	 *
+	 * @return \MORLIC\Myaudioshop\Domain\Model\Country $location
+	 */
+	public function getLocation() {
+		return $this->location;
+	}
+
+	/**
+	 * Sets the location
+	 *
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Country $location
+	 * @return void
+	 */
+	public function setLocation(\MORLIC\Myaudioshop\Domain\Model\Country $location) {
+		$this->location = $location;
+	}
+
+	/**
+	 * Returns the user
+	 *
+	 * @return \MORLIC\Myaudioshop\Domain\Model\User $user
+	 */
+	public function getUser() {
+		return $this->user;
+	}
+
+	/**
+	 * Sets the user
+	 *
+	 * @param \MORLIC\Myaudioshop\Domain\Model\User $user
+	 * @return void
+	 */
+	public function setUser(\MORLIC\Myaudioshop\Domain\Model\User $user) {
+		$this->user = $user;
+	}
+
+	/**
+	 * Returns the brand
+	 *
+	 * @return \MORLIC\Myaudioshop\Domain\Model\Brand $brand
+	 */
+	public function getBrand() {
+		return $this->brand;
+	}
+
+	/**
+	 * Sets the brand
+	 *
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Brand $brand
+	 * @return void
+	 */
+	public function setBrand(\MORLIC\Myaudioshop\Domain\Model\Brand $brand) {
+		$this->brand = $brand;
 	}
 
 }

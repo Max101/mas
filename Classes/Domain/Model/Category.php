@@ -1,5 +1,5 @@
 <?php
-namespace TYPO3\Myaudioshop\Domain\Model;
+namespace MORLIC\Myaudioshop\Domain\Model;
 
 /***************************************************************
  *  Copyright notice
@@ -45,7 +45,7 @@ class Category extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 	/**
 	 * parentCategory
 	 *
-	 * @var \TYPO3\Myaudioshop\Domain\Model\Category
+	 * @var \MORLIC\Myaudioshop\Domain\Model\Category
 	 */
 	protected $parentCategory;
 
@@ -71,7 +71,7 @@ class Category extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 	/**
 	 * Returns the parentCategory
 	 *
-	 * @return \TYPO3\Myaudioshop\Domain\Model\Category $parentCategory
+	 * @return \MORLIC\Myaudioshop\Domain\Model\Category $parentCategory
 	 */
 	public function getParentCategory() {
 		return $this->parentCategory;
@@ -80,10 +80,10 @@ class Category extends \TYPO3\CMS\Extbase\DomainObject\AbstractValueObject {
 	/**
 	 * Sets the parentCategory
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Category $parentCategory
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Category $parentCategory
 	 * @return void
 	 */
-	public function setParentCategory(\TYPO3\Myaudioshop\Domain\Model\Category $parentCategory) {
+	public function setParentCategory(\MORLIC\Myaudioshop\Domain\Model\Category $parentCategory) {
 		$this->parentCategory = $parentCategory;
 	}
 

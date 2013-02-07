@@ -1,5 +1,5 @@
 <?php
-namespace TYPO3\Myaudioshop\Tests;
+namespace MORLIC\Myaudioshop\Tests;
 /***************************************************************
  *  Copyright notice
  *
@@ -43,7 +43,7 @@ class MessageControllerTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
 	protected $fixture;
 
 	public function setUp() {
-		$this->fixture = new \TYPO3\Myaudioshop\Domain\Model\Message();
+		$this->fixture = new \MORLIC\Myaudioshop\Domain\Model\Message();
 	}
 
 	public function tearDown() {

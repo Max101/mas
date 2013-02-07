@@ -1,5 +1,5 @@
 <?php
-namespace TYPO3\Myaudioshop\Tests;
+namespace MORLIC\Myaudioshop\Tests;
 /***************************************************************
  *  Copyright notice
  *
@@ -43,7 +43,7 @@ class CategoryControllerTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase 
 	protected $fixture;
 
 	public function setUp() {
-		$this->fixture = new \TYPO3\Myaudioshop\Domain\Model\Category();
+		$this->fixture = new \MORLIC\Myaudioshop\Domain\Model\Category();
 	}
 
 	public function tearDown() {

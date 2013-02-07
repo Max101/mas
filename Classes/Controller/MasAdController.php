@@ -1,5 +1,5 @@
 <?php
-namespace TYPO3\Myaudioshop\Controller;
+namespace MORLIC\Myaudioshop\Controller;
 
 /***************************************************************
  *  Copyright notice
@@ -37,7 +37,7 @@ class MasAdController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	/**
 	 * masAdRepository
 	 *
-	 * @var \TYPO3\Myaudioshop\Domain\Repository\MasAdRepository
+	 * @var \MORLIC\Myaudioshop\Domain\Repository\MasAdRepository
 	 * @inject
 	 */
 	protected $masAdRepository;
@@ -55,31 +55,34 @@ class MasAdController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	/**
 	 * action show
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\MasAd $masAd
+	 * @param \MORLIC\Myaudioshop\Domain\Model\MasAd $masAd
 	 * @return void
 	 */
-	public function showAction(\TYPO3\Myaudioshop\Domain\Model\MasAd $masAd) {
+	public function showAction(\MORLIC\Myaudioshop\Domain\Model\MasAd $masAd) {
 		$this->view->assign('masAd', $masAd);
 	}
 
 	/**
 	 * action new
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\MasAd $newMasAd
+	 * @param \MORLIC\Myaudioshop\Domain\Model\MasAd $newMasAd
 	 * @dontvalidate $newMasAd
 	 * @return void
 	 */
-	public function newAction(\TYPO3\Myaudioshop\Domain\Model\MasAd $newMasAd = NULL) {
+	public function newAction(\MORLIC\Myaudioshop\Domain\Model\MasAd $newMasAd = NULL) {
+		if ($newMasAd == NULL) { // workaround for fluid bug ##5636
+			$newMasAd = t3lib_div::makeInstance('');
+		}
 		$this->view->assign('newMasAd', $newMasAd);
 	}
 
 	/**
 	 * action create
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\MasAd $newMasAd
+	 * @param \MORLIC\Myaudioshop\Domain\Model\MasAd $newMasAd
 	 * @return void
 	 */
-	public function createAction(\TYPO3\Myaudioshop\Domain\Model\MasAd $newMasAd) {
+	public function createAction(\MORLIC\Myaudioshop\Domain\Model\MasAd $newMasAd) {
 		$this->masAdRepository->add($newMasAd);
 		$this->flashMessageContainer->add('Your new MasAd was created.');
 		$this->redirect('list');
@@ -88,20 +91,20 @@ class MasAdController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	/**
 	 * action edit
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\MasAd $masAd
+	 * @param \MORLIC\Myaudioshop\Domain\Model\MasAd $masAd
 	 * @return void
 	 */
-	public function editAction(\TYPO3\Myaudioshop\Domain\Model\MasAd $masAd) {
+	public function editAction(\MORLIC\Myaudioshop\Domain\Model\MasAd $masAd) {
 		$this->view->assign('masAd', $masAd);
 	}
 
 	/**
 	 * action update
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\MasAd $masAd
+	 * @param \MORLIC\Myaudioshop\Domain\Model\MasAd $masAd
 	 * @return void
 	 */
-	public function updateAction(\TYPO3\Myaudioshop\Domain\Model\MasAd $masAd) {
+	public function updateAction(\MORLIC\Myaudioshop\Domain\Model\MasAd $masAd) {
 		$this->masAdRepository->update($masAd);
 		$this->flashMessageContainer->add('Your MasAd was updated.');
 		$this->redirect('list');
@@ -110,10 +113,10 @@ class MasAdController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionController
 	/**
 	 * action delete
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\MasAd $masAd
+	 * @param \MORLIC\Myaudioshop\Domain\Model\MasAd $masAd
 	 * @return void
 	 */
-	public function deleteAction(\TYPO3\Myaudioshop\Domain\Model\MasAd $masAd) {
+	public function deleteAction(\MORLIC\Myaudioshop\Domain\Model\MasAd $masAd) {
 		$this->masAdRepository->remove($masAd);
 		$this->flashMessageContainer->add('Your MasAd was removed.');
 		$this->redirect('list');

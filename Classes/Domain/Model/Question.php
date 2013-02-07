@@ -1,5 +1,5 @@
 <?php
-namespace TYPO3\Myaudioshop\Domain\Model;
+namespace MORLIC\Myaudioshop\Domain\Model;
 
 /***************************************************************
  *  Copyright notice
@@ -37,14 +37,14 @@ class Question extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * product
 	 *
-	 * @var \TYPO3\Myaudioshop\Domain\Model\MasAd
+	 * @var \MORLIC\Myaudioshop\Domain\Model\MasAd
 	 */
 	protected $product;
 
 	/**
 	 * Returns the product
 	 *
-	 * @return \TYPO3\Myaudioshop\Domain\Model\MasAd $product
+	 * @return \MORLIC\Myaudioshop\Domain\Model\MasAd $product
 	 */
 	public function getProduct() {
 		return $this->product;
@@ -53,10 +53,10 @@ class Question extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	/**
 	 * Sets the product
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\MasAd $product
+	 * @param \MORLIC\Myaudioshop\Domain\Model\MasAd $product
 	 * @return void
 	 */
-	public function setProduct(\TYPO3\Myaudioshop\Domain\Model\MasAd $product) {
+	public function setProduct(\MORLIC\Myaudioshop\Domain\Model\MasAd $product) {
 		$this->product = $product;
 	}
 

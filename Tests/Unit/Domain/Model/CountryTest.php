@@ -1,6 +1,6 @@
 <?php
 
-namespace TYPO3\Myaudioshop\Tests;
+namespace MORLIC\Myaudioshop\Tests;
 /***************************************************************
  *  Copyright notice
  *
@@ -26,7 +26,7 @@ namespace TYPO3\Myaudioshop\Tests;
  ***************************************************************/
 
 /**
- * Test case for class \TYPO3\Myaudioshop\Domain\Model\Country.
+ * Test case for class \MORLIC\Myaudioshop\Domain\Model\Country.
  *
  * @version $Id$
  * @copyright Copyright belongs to the respective authors
@@ -39,12 +39,12 @@ namespace TYPO3\Myaudioshop\Tests;
  */
 class CountryTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
 	/**
-	 * @var \TYPO3\Myaudioshop\Domain\Model\Country
+	 * @var \MORLIC\Myaudioshop\Domain\Model\Country
 	 */
 	protected $fixture;
 
 	public function setUp() {
-		$this->fixture = new \TYPO3\Myaudioshop\Domain\Model\Country();
+		$this->fixture = new \MORLIC\Myaudioshop\Domain\Model\Country();
 	}
 
 	public function tearDown() {

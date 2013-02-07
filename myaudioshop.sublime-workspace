@@ -1,0 +1,372 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"text",
+				"text-indent"
+			],
+			[
+				"rea",
+				"ready	jQuery(document).ready"
+			],
+			[
+				"read",
+				"ready	$(document).ready"
+			],
+			[
+				"each",
+				".each	$.each()"
+			],
+			[
+				"jQuer",
+				"jQuery.when	jQuery.when"
+			],
+			[
+				"j",
+				"jQuery.getJSON	jQuery.getJSON"
+			],
+			[
+				"je",
+				"jeProizvedel"
+			],
+			[
+				"c",
+				"cla	Class"
+			],
+			[
+				"is",
+				"isHappy"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 67.0,
+		"selected_items":
+		[
+			[
+				"forma",
+				"Tag: Auto-Format Tags on Document"
+			],
+			[
+				"format",
+				"Tag: Auto-Format Tags on Document"
+			],
+			[
+				"lint",
+				"Tag: Lint Selection or Document"
+			],
+			[
+				"Tag",
+				"Tag: Auto-Format Tags on Document"
+			],
+			[
+				"inde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"tag",
+				"Tag: Insert as Tag"
+			],
+			[
+				"linter",
+				"SublimeLinter: Disable Linting"
+			],
+			[
+				"req",
+				"HTTP Requester"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"t",
+				"Tidy HTML"
+			],
+			[
+				"tid",
+				"Tidy HTML"
+			],
+			[
+				"htm",
+				"Tidy HTML"
+			],
+			[
+				"gist",
+				"Gist: Insert Gist"
+			],
+			[
+				"gis",
+				"Gist: Create Private Gist"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"snipp jq",
+				"Snippet: jQuery AJAX call"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"jq",
+				"Set Syntax: jQuery (JavaScript)"
+			],
+			[
+				"packa",
+				"Package Control: Discover Packages"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"brows",
+				"Preferences: Browse Packages"
+			],
+			[
+				"packa lis",
+				"Package Control: List Packages"
+			],
+			[
+				"pac",
+				"Package Control: Discover Packages"
+			],
+			[
+				"hmtl",
+				"Set Syntax: HTML (Tcl)"
+			],
+			[
+				"xml",
+				"Set Syntax: XML"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"typos",
+				"Set Syntax: TypoScript"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"coffe",
+				"Set Syntax: CoffeeScript"
+			],
+			[
+				"pack",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Applications/MAMP/Support/appsolute/MAMP",
+		"/Applications/MAMP/PRO/conf/php.ini",
+		"/Applications/MAMP/conf/php5.4.4/php.ini",
+		"/Users/max/Library/Caches/Cleanup At Startup/Transmit/4452DB88-1652-4566-826F-5D3279A99349/style.css",
+		"/Users/max/Sites/typo6/typo3conf/LocalConfiguration.php",
+		"/Users/max/Dropbox/appsync/Sublime Text 2/Packages/Gist/Gist.sublime-settings",
+		"/Users/max/Dropbox/appsync/Sublime Text 2/Packages/TYPO3 Fluid Snippets/format-currency.sublime-snippet",
+		"/Users/max/Dropbox/appsync/Sublime Text 2/Packages/TYPO3 Fluid Snippets/form-radio.sublime-snippet",
+		"/Users/max/Dropbox/appsync/Sublime Text 2/Packages/TYPO3 Fluid Snippets/base.sublime-snippet",
+		"/Users/max/Sites/typo6/typo3conf/ext/myaudioshop/Classes/Controller/FeedbackController.php",
+		"/Users/max/Sites/typo6/typo3conf/ext/myaudioshop/Classes/Domain/Repository/UserRepository.php",
+		"/Users/max/Sites/typo6/typo3conf/ext/myaudioshop/Classes/Domain/Model/Country.php",
+		"/Users/max/Sites/typo6/typo3conf/ext/myaudioshop/Classes/Domain/Repository/MasAdRepository.php",
+		"/Users/max/Sites/typo6/typo3conf/ext/myaudioshop/Classes/Domain/Model/Question.php",
+		"/Users/max/Sites/typo6/typo3conf/ext/myaudioshop/ext_tables.php",
+		"/Users/max/Sites/typo6/typo3conf/ext/myaudioshop/Configuration/ExtensionBuilder/settings.yaml",
+		"/Users/max/Sites/typo6/typo3conf/ext/myaudioshop/Classes/Domain/Model/Feedback.php",
+		"/Users/max/Sites/typo6/typo3conf/ext/myaudioshop/Configuration/TypoScript/setup.txt",
+		"/Users/max/Sites/typo6/typo3conf/ext/myaudioshop/Classes/Domain/Model/User.php",
+		"/Users/max/Sites/typo6/typo3conf/ext/myaudioshop/ext_typoscript_setup.txt",
+		"/Users/max/Sites/typo6/typo3conf/ext/myaudioshop/ext_localconf.php",
+		"/Users/max/Sites/typo6/typo3conf/ext/myaudioshop/Configuration/TCA/MasAd.php",
+		"/Users/max/Sites/typo6/typo3conf/ext/myaudioshop/Configuration/TCA/User.php",
+		"/Users/max/Sites/typo6/typo3conf/ext/blog_example/Configuration/TypoScript/setup.txt",
+		"/Users/max/Sites/typo6/typo3conf/ext/myaudioshop/Configuration/TCA/Category.php",
+		"/Users/max/Sites/typo6/typo3conf/ext/blog_example/Configuration/TCA/tca.php",
+		"/Users/max/Sites/typo6/typo3conf/ext/blog_example/Classes/Controller/AbstractController.php",
+		"/Users/max/Sites/typo6/typo3conf/ext/blog_example/Classes/ViewHelpers/GravatarViewHelper.php",
+		"/Users/max/Sites/introductionpackage-4.7.4/typo3conf/ext/mo_bikeshop/Classes/Controller/ProizvajalecController.php",
+		"/Users/max/Sites/introductionpackage-4.7.4/typo3conf/ext/blog_example/Classes/Controller/AbstractController.php",
+		"/Users/max/Sites/introductionpackage-4.7.4/typo3conf/ext/mo_bikeshop/Classes/Domain/Model/Kolo.php",
+		"/Users/max/Sites/introductionpackage-4.7.4/typo3conf/ext/mo_bikeshop/Classes/Controller/KoloController.php",
+		"/Users/max/Sites/introductionpackage-4.7.4/typo3conf/ext/blog_example/Classes/Controller/BlogController.php",
+		"/Users/max/Dropbox/appsync/Sublime Text 2/Packages/PHP/$_SESSION[''].sublime-snippet",
+		"/Users/max/Library/Application Support/Sublime Text 2/Packages/User/PHP.sublime-settings",
+		"/Users/max/Sites/coffeescript/js/test.js",
+		"/Users/max/Sites/coffeescript/coffee/test.coffee",
+		"/Users/max/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/max/Library/Application Support/Sublime Text 2/Packages/SideBarEnhancements/messages/11.13.2012.1305.0.txt",
+		"/Users/max/Library/Application Support/Sublime Text 2/Packages/User/Distraction Free.sublime-settings",
+		"/Users/max/Library/Application Support/Sublime Text 2/Packages/User/SideBarEnhancements/Open With/Side Bar.sublime-menu",
+		"/Users/max/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/max/Sites/coffeescript/js/test1.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"max_execution_time",
+			"time",
+			"APC",
+			";}\n",
+			".facebook_button:hover{margin-top:29px; height:35px;}",
+			"mya",
+			"my",
+			"hahah",
+			"hahahha",
+			"hahahahahha",
+			"recently",
+			"nekaj",
+			"path",
+			"t3lib_div",
+			"countri",
+			"tx_extbase_type",
+			"_myaudioshop_domain_model_user",
+			"_myaudioshop_domain_model_q",
+			"$TCA['fe_users']['types']['Tx_Myaudioshop_User']",
+			"dsfds",
+			"FrontendUser",
+			"administrator",
+			"admin",
+			"cat",
+			"has_co",
+			"divider",
+			"none",
+			"function",
+			"hello"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 223.0,
+	"status_bar_visible": true
+}

@@ -1,5 +1,5 @@
 <?php
-namespace TYPO3\Myaudioshop\Controller;
+namespace MORLIC\Myaudioshop\Controller;
 
 /***************************************************************
  *  Copyright notice
@@ -37,7 +37,7 @@ class MessageController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 	/**
 	 * messageRepository
 	 *
-	 * @var \TYPO3\Myaudioshop\Domain\Repository\MessageRepository
+	 * @var \MORLIC\Myaudioshop\Domain\Repository\MessageRepository
 	 * @inject
 	 */
 	protected $messageRepository;
@@ -55,31 +55,31 @@ class MessageController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 	/**
 	 * action show
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Message $message
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Message $message
 	 * @return void
 	 */
-	public function showAction(\TYPO3\Myaudioshop\Domain\Model\Message $message) {
+	public function showAction(\MORLIC\Myaudioshop\Domain\Model\Message $message) {
 		$this->view->assign('message', $message);
 	}
 
 	/**
 	 * action new
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Message $newMessage
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Message $newMessage
 	 * @dontvalidate $newMessage
 	 * @return void
 	 */
-	public function newAction(\TYPO3\Myaudioshop\Domain\Model\Message $newMessage = NULL) {
+	public function newAction(\MORLIC\Myaudioshop\Domain\Model\Message $newMessage = NULL) {
 		$this->view->assign('newMessage', $newMessage);
 	}
 
 	/**
 	 * action create
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Message $newMessage
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Message $newMessage
 	 * @return void
 	 */
-	public function createAction(\TYPO3\Myaudioshop\Domain\Model\Message $newMessage) {
+	public function createAction(\MORLIC\Myaudioshop\Domain\Model\Message $newMessage) {
 		$this->messageRepository->add($newMessage);
 		$this->flashMessageContainer->add('Your new Message was created.');
 		$this->redirect('list');
@@ -88,20 +88,20 @@ class MessageController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 	/**
 	 * action edit
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Message $message
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Message $message
 	 * @return void
 	 */
-	public function editAction(\TYPO3\Myaudioshop\Domain\Model\Message $message) {
+	public function editAction(\MORLIC\Myaudioshop\Domain\Model\Message $message) {
 		$this->view->assign('message', $message);
 	}
 
 	/**
 	 * action update
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Message $message
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Message $message
 	 * @return void
 	 */
-	public function updateAction(\TYPO3\Myaudioshop\Domain\Model\Message $message) {
+	public function updateAction(\MORLIC\Myaudioshop\Domain\Model\Message $message) {
 		$this->messageRepository->update($message);
 		$this->flashMessageContainer->add('Your Message was updated.');
 		$this->redirect('list');
@@ -110,10 +110,10 @@ class MessageController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 	/**
 	 * action delete
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Message $message
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Message $message
 	 * @return void
 	 */
-	public function deleteAction(\TYPO3\Myaudioshop\Domain\Model\Message $message) {
+	public function deleteAction(\MORLIC\Myaudioshop\Domain\Model\Message $message) {
 		$this->messageRepository->remove($message);
 		$this->flashMessageContainer->add('Your Message was removed.');
 		$this->redirect('list');

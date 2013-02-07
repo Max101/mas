@@ -4,7 +4,7 @@ if (!defined('TYPO3_MODE')) {
 }
 
 \TYPO3\CMS\Extbase\Utility\ExtensionUtility::configurePlugin(
-	'TYPO3.' . $_EXTKEY,
+	'MORLIC.' . $_EXTKEY,
 	'Audioshop',
 	array(
 		'MasAd' => 'list, show, new, create, edit, update, delete',
@@ -19,4 +19,5 @@ if (!defined('TYPO3_MODE')) {
 	)
 );
 
+## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-namespace TYPO3\Myaudioshop\Tests;
+namespace MORLIC\Myaudioshop\Tests;
 /***************************************************************
  *  Copyright notice
  *
@@ -26,7 +26,7 @@ namespace TYPO3\Myaudioshop\Tests;
  ***************************************************************/
 
 /**
- * Test case for class \TYPO3\Myaudioshop\Domain\Model\User.
+ * Test case for class \MORLIC\Myaudioshop\Domain\Model\User.
  *
  * @version $Id$
  * @copyright Copyright belongs to the respective authors
@@ -39,12 +39,12 @@ namespace TYPO3\Myaudioshop\Tests;
  */
 class UserTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
 	/**
-	 * @var \TYPO3\Myaudioshop\Domain\Model\User
+	 * @var \MORLIC\Myaudioshop\Domain\Model\User
 	 */
 	protected $fixture;
 
 	public function setUp() {
-		$this->fixture = new \TYPO3\Myaudioshop\Domain\Model\User();
+		$this->fixture = new \MORLIC\Myaudioshop\Domain\Model\User();
 	}
 
 	public function tearDown() {
@@ -66,7 +66,7 @@ class UserTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
 	 * @test
 	 */
 	public function setFavoriteUserForObjectStorageContainingUserSetsFavoriteUser() { 
-		$favoriteUser = new \TYPO3\Myaudioshop\Domain\Model\User();
+		$favoriteUser = new \MORLIC\Myaudioshop\Domain\Model\User();
 		$objectStorageHoldingExactlyOneFavoriteUser = new \TYPO3\CMS\Extbase\Persistence\Generic\ObjectStorage();
 		$objectStorageHoldingExactlyOneFavoriteUser->attach($favoriteUser);
 		$this->fixture->setFavoriteUser($objectStorageHoldingExactlyOneFavoriteUser);
@@ -81,7 +81,7 @@ class UserTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
 	 * @test
 	 */
 	public function addFavoriteUserToObjectStorageHoldingFavoriteUser() {
-		$favoriteUser = new \TYPO3\Myaudioshop\Domain\Model\User();
+		$favoriteUser = new \MORLIC\Myaudioshop\Domain\Model\User();
 		$objectStorageHoldingExactlyOneFavoriteUser = new \TYPO3\CMS\Extbase\Persistence\Generic\ObjectStorage();
 		$objectStorageHoldingExactlyOneFavoriteUser->attach($favoriteUser);
 		$this->fixture->addFavoriteUser($favoriteUser);
@@ -96,7 +96,7 @@ class UserTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
 	 * @test
 	 */
 	public function removeFavoriteUserFromObjectStorageHoldingFavoriteUser() {
-		$favoriteUser = new \TYPO3\Myaudioshop\Domain\Model\User();
+		$favoriteUser = new \MORLIC\Myaudioshop\Domain\Model\User();
 		$localObjectStorage = new \TYPO3\CMS\Extbase\Persistence\Generic\ObjectStorage();
 		$localObjectStorage->attach($favoriteUser);
 		$localObjectStorage->detach($favoriteUser);
@@ -124,7 +124,7 @@ class UserTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
 	 * @test
 	 */
 	public function setFavoriteAdForObjectStorageContainingMasAdSetsFavoriteAd() { 
-		$favoriteAd = new \TYPO3\Myaudioshop\Domain\Model\MasAd();
+		$favoriteAd = new \MORLIC\Myaudioshop\Domain\Model\MasAd();
 		$objectStorageHoldingExactlyOneFavoriteAd = new \TYPO3\CMS\Extbase\Persistence\Generic\ObjectStorage();
 		$objectStorageHoldingExactlyOneFavoriteAd->attach($favoriteAd);
 		$this->fixture->setFavoriteAd($objectStorageHoldingExactlyOneFavoriteAd);
@@ -139,7 +139,7 @@ class UserTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
 	 * @test
 	 */
 	public function addFavoriteAdToObjectStorageHoldingFavoriteAd() {
-		$favoriteAd = new \TYPO3\Myaudioshop\Domain\Model\MasAd();
+		$favoriteAd = new \MORLIC\Myaudioshop\Domain\Model\MasAd();
 		$objectStorageHoldingExactlyOneFavoriteAd = new \TYPO3\CMS\Extbase\Persistence\Generic\ObjectStorage();
 		$objectStorageHoldingExactlyOneFavoriteAd->attach($favoriteAd);
 		$this->fixture->addFavoriteAd($favoriteAd);
@@ -154,7 +154,7 @@ class UserTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
 	 * @test
 	 */
 	public function removeFavoriteAdFromObjectStorageHoldingFavoriteAd() {
-		$favoriteAd = new \TYPO3\Myaudioshop\Domain\Model\MasAd();
+		$favoriteAd = new \MORLIC\Myaudioshop\Domain\Model\MasAd();
 		$localObjectStorage = new \TYPO3\CMS\Extbase\Persistence\Generic\ObjectStorage();
 		$localObjectStorage->attach($favoriteAd);
 		$localObjectStorage->detach($favoriteAd);
@@ -166,6 +166,16 @@ class UserTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
 			$this->fixture->getFavoriteAd()
 		);
 	}
+	
+	/**
+	 * @test
+	 */
+	public function getCountryReturnsInitialValueForCountry() { }
+
+	/**
+	 * @test
+	 */
+	public function setCountryForCountrySetsCountry() { }
 	
 }
 ?>

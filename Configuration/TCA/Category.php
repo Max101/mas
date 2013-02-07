@@ -116,4 +116,25 @@ $TCA['tx_myaudioshop_domain_model_category'] = array(
 );
 
 ## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
+
+$TCA['tx_myaudioshop_domain_model_category']['columns']['parent_category']['l10n_mode'] = 'mergeIfNotBlank';
+$TCA['tx_myaudioshop_domain_model_category']['columns']['parent_category']['config'] = array(
+
+					'type' => 'select',
+					'renderMode' => 'tree',
+				 	'treeConfig' => array(
+				 		'parentField' => 'parent_category',
+				 		'appearance' => array(
+				 			'expandAll' => TRUE,
+				 			'showHeader' => TRUE,
+				 		),
+				 	),
+				 	'foreign_table' => 'tx_myaudioshop_domain_model_category',
+				 	'size' => 10,
+				 	'autoSizeMax' => 20,
+				 	'minitems' => 0,
+				 	'maxitems' => 20,
+				);
+
+
 ?>

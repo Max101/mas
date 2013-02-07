@@ -1,5 +1,5 @@
 <?php
-namespace TYPO3\Myaudioshop\Controller;
+namespace MORLIC\Myaudioshop\Controller;
 
 /***************************************************************
  *  Copyright notice
@@ -37,7 +37,7 @@ class FeedbackController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	/**
 	 * feedbackRepository
 	 *
-	 * @var \TYPO3\Myaudioshop\Domain\Repository\FeedbackRepository
+	 * @var \MORLIC\Myaudioshop\Domain\Repository\FeedbackRepository
 	 * @inject
 	 */
 	protected $feedbackRepository;
@@ -55,21 +55,21 @@ class FeedbackController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	/**
 	 * action show
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Feedback $feedback
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Feedback $feedback
 	 * @return void
 	 */
-	public function showAction(\TYPO3\Myaudioshop\Domain\Model\Feedback $feedback) {
+	public function showAction(\MORLIC\Myaudioshop\Domain\Model\Feedback $feedback) {
 		$this->view->assign('feedback', $feedback);
 	}
 
 	/**
 	 * action new
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Feedback $newFeedback
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Feedback $newFeedback
 	 * @dontvalidate $newFeedback
 	 * @return void
 	 */
-	public function newAction(\TYPO3\Myaudioshop\Domain\Model\Feedback $newFeedback = NULL) {
+	public function newAction(\MORLIC\Myaudioshop\Domain\Model\Feedback $newFeedback = NULL) {
 		if ($newFeedback == NULL) { // workaround for fluid bug ##5636
 			$newFeedback = t3lib_div::makeInstance('');
 		}
@@ -79,10 +79,10 @@ class FeedbackController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	/**
 	 * action create
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Feedback $newFeedback
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Feedback $newFeedback
 	 * @return void
 	 */
-	public function createAction(\TYPO3\Myaudioshop\Domain\Model\Feedback $newFeedback) {
+	public function createAction(\MORLIC\Myaudioshop\Domain\Model\Feedback $newFeedback) {
 		$this->feedbackRepository->add($newFeedback);
 		$this->flashMessageContainer->add('Your new Feedback was created.');
 		$this->redirect('list');
@@ -91,20 +91,20 @@ class FeedbackController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	/**
 	 * action edit
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Feedback $feedback
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Feedback $feedback
 	 * @return void
 	 */
-	public function editAction(\TYPO3\Myaudioshop\Domain\Model\Feedback $feedback) {
+	public function editAction(\MORLIC\Myaudioshop\Domain\Model\Feedback $feedback) {
 		$this->view->assign('feedback', $feedback);
 	}
 
 	/**
 	 * action update
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Feedback $feedback
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Feedback $feedback
 	 * @return void
 	 */
-	public function updateAction(\TYPO3\Myaudioshop\Domain\Model\Feedback $feedback) {
+	public function updateAction(\MORLIC\Myaudioshop\Domain\Model\Feedback $feedback) {
 		$this->feedbackRepository->update($feedback);
 		$this->flashMessageContainer->add('Your Feedback was updated.');
 		$this->redirect('list');
@@ -113,10 +113,10 @@ class FeedbackController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	/**
 	 * action delete
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Feedback $feedback
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Feedback $feedback
 	 * @return void
 	 */
-	public function deleteAction(\TYPO3\Myaudioshop\Domain\Model\Feedback $feedback) {
+	public function deleteAction(\MORLIC\Myaudioshop\Domain\Model\Feedback $feedback) {
 		$this->feedbackRepository->remove($feedback);
 		$this->flashMessageContainer->add('Your Feedback was removed.');
 		$this->redirect('list');

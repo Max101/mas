@@ -1,17 +1,16 @@
 <?php
-namespace MORLIC\Myaudioshop\Domain\Model;
-
+namespace MAS\Myaudioshop\Tests;
 /***************************************************************
  *  Copyright notice
  *
  *  (c) 2013 Mitja Orlić <mitja_max@yahoo.com>
- *  
+ *  			
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is
  *  free software; you can redistribute it and/or modify
  *  it under the terms of the GNU General Public License as published by
- *  the Free Software Foundation; either version 3 of the License, or
+ *  the Free Software Foundation; either version 2 of the License, or
  *  (at your option) any later version.
  *
  *  The GNU General Public License can be found at
@@ -26,13 +25,37 @@ namespace MORLIC\Myaudioshop\Domain\Model;
  ***************************************************************/
 
 /**
+ * Test case for class Tx_Myaudioshop_Controller_CountryController.
  *
- *
- * @package myaudioshop
+ * @version $Id$
+ * @copyright Copyright belongs to the respective authors
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
+ * @package TYPO3
+ * @subpackage MyAudioShop
+ *
+ * @author Mitja Orlić <mitja_max@yahoo.com>
  */
-class Country extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+class CountryControllerTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
+	/**
+	 * @var 
+	 */
+	protected $fixture;
+
+	public function setUp() {
+		$this->fixture = new \MAS\Myaudioshop\Domain\Model\Country();
+	}
+
+	public function tearDown() {
+		unset($this->fixture);
+	}
+
+	/**
+	 * @test
+	 */
+	public function dummyMethod() {
+		$this->markTestIncomplete();
+	}
 
 }
 ?>

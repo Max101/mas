@@ -1,11 +1,11 @@
 config.tx_extbase{
     persistence{
         classes{
-
+            MORLIC\Myaudioshop\Domain\Model\Country
              {
                 mapping {
                     tableName = static_countries
-                    recordType = Tx_Myaudioshop_Country
+                    recordType = MORLIC\Myaudioshop\Domain\Model\Country
                 }
             }
             

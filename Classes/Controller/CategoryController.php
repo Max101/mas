@@ -1,5 +1,5 @@
 <?php
-namespace TYPO3\Myaudioshop\Controller;
+namespace MORLIC\Myaudioshop\Controller;
 
 /***************************************************************
  *  Copyright notice
@@ -47,31 +47,31 @@ class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	/**
 	 * action show
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Category $category
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Category $category
 	 * @return void
 	 */
-	public function showAction(\TYPO3\Myaudioshop\Domain\Model\Category $category) {
+	public function showAction(\MORLIC\Myaudioshop\Domain\Model\Category $category) {
 		$this->view->assign('category', $category);
 	}
 
 	/**
 	 * action new
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Category $newCategory
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Category $newCategory
 	 * @dontvalidate $newCategory
 	 * @return void
 	 */
-	public function newAction(\TYPO3\Myaudioshop\Domain\Model\Category $newCategory = NULL) {
+	public function newAction(\MORLIC\Myaudioshop\Domain\Model\Category $newCategory = NULL) {
 		$this->view->assign('newCategory', $newCategory);
 	}
 
 	/**
 	 * action create
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Category $newCategory
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Category $newCategory
 	 * @return void
 	 */
-	public function createAction(\TYPO3\Myaudioshop\Domain\Model\Category $newCategory) {
+	public function createAction(\MORLIC\Myaudioshop\Domain\Model\Category $newCategory) {
 		$this->categoryRepository->add($newCategory);
 		$this->flashMessageContainer->add('Your new Category was created.');
 		$this->redirect('list');
@@ -80,20 +80,20 @@ class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	/**
 	 * action edit
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Category $category
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Category $category
 	 * @return void
 	 */
-	public function editAction(\TYPO3\Myaudioshop\Domain\Model\Category $category) {
+	public function editAction(\MORLIC\Myaudioshop\Domain\Model\Category $category) {
 		$this->view->assign('category', $category);
 	}
 
 	/**
 	 * action update
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Category $category
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Category $category
 	 * @return void
 	 */
-	public function updateAction(\TYPO3\Myaudioshop\Domain\Model\Category $category) {
+	public function updateAction(\MORLIC\Myaudioshop\Domain\Model\Category $category) {
 		$this->categoryRepository->update($category);
 		$this->flashMessageContainer->add('Your Category was updated.');
 		$this->redirect('list');
@@ -102,10 +102,10 @@ class CategoryController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControl
 	/**
 	 * action delete
 	 *
-	 * @param \TYPO3\Myaudioshop\Domain\Model\Category $category
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Category $category
 	 * @return void
 	 */
-	public function deleteAction(\TYPO3\Myaudioshop\Domain\Model\Category $category) {
+	public function deleteAction(\MORLIC\Myaudioshop\Domain\Model\Category $category) {
 		$this->categoryRepository->remove($category);
 		$this->flashMessageContainer->add('Your Category was removed.');
 		$this->redirect('list');

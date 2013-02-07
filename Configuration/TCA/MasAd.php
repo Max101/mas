@@ -258,4 +258,59 @@ $TCA['tx_myaudioshop_domain_model_masad'] = array(
 );
 
 ## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
+
+$TCA['tx_myaudioshop_domain_model_masad']['interface'] = array(
+	'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name, description, images, price, new_price, manual, remote, shipment_type, payment, views, weight, category, location, user, brand',
+);
+$TCA['tx_myaudioshop_domain_model_masad']['types'] = array(
+	'1' => array('showitem' => '
+								l10n_parent,
+								l10n_diffsource,
+								hidden;;1,
+								name,
+								description,
+								--div--;LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_masad.tabs.image,
+								images,
+								--div--;LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_masad.tabs.prices,
+								price,
+								new_price,
+								--div--;LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_masad.tabs.location,
+								location,
+								shipment_type,
+								payment,
+								--div--;LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_masad.tabs.extras,
+								views,
+								remote,
+								manual,
+								weight,
+								--div--;LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_masad.tabs.realtions,
+								user,
+								category,
+								brand,
+								--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,
+								starttime,
+								endtime'
+	),
+);
+
+$TCA['tx_myaudioshop_domain_model_masad']['columns']['category']['l10n_mode'] = 'mergeIfNotBlank';
+$TCA['tx_myaudioshop_domain_model_masad']['columns']['category']['config'] = array(
+
+					'type' => 'select',
+					'renderMode' => 'tree',
+				 	'treeConfig' => array(
+				 		'parentField' => 'parent_category',
+				 		'appearance' => array(
+				 			'expandAll' => TRUE,
+				 			'showHeader' => TRUE,
+				 		),
+				 	),
+				 	//'MM' => 'tx_news2_domain_model_news_category_mm',
+				 	'foreign_table' => 'tx_myaudioshop_domain_model_category',
+				 	'size' => 10,
+				 	'autoSizeMax' => 20,
+				 	'minitems' => 0,
+				 	'maxitems' => 20,
+				);
+
 ?>
