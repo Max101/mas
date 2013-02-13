@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-02-12T23:55:39Z" product-name="myaudioshop">
+		<header/>
+		<body>
+
+			<trans-unit id="tx_myaudioshop_domain_model_masad.tabs.image">
+				<source>Image</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.tabs.prices">
+				<source>Prices</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.tabs.location">
+				<source>Location / Payment</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.tabs.extras">
+				<source>Extra</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.tabs.realtions">
+				<source>Category / Brand</source>
+			</trans-unit>
+
+		</body>
+	</file>
+</xliff>

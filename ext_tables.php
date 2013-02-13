@@ -302,4 +302,9 @@ if (is_array($TCA['fe_users']['columns']['tx_extbase_type'])) {
 }
 
 */
+
+$TCA['tx_myaudioshop_domain_model_masad']['ctrl']['iconfile'] = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_myaudioshop_domain_model_masad.png';
+$TCA['tx_myaudioshop_domain_model_category']['ctrl']['iconfile'] = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_myaudioshop_domain_model_category.png';
+$TCA['tx_myaudioshop_domain_model_brand']['ctrl']['iconfile'] = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_myaudioshop_domain_model_brand.png';
+
 ?>

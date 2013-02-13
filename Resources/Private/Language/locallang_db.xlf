@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2013-01-17T23:43:20Z" product-name="myaudioshop">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-02-12T23:55:39Z" product-name="myaudioshop">
 		<header/>
 		<body>
 
@@ -53,11 +53,6 @@
 				<source>Brand</source>
 			</trans-unit>
 
-
-			<trans-unit id="tx_myaudioshop_domain_model_masad.tabs.image">
-				<source>Image stuff</source>
-			</trans-unit>
-
 			<trans-unit id="tx_myaudioshop_domain_model_category">
 				<source>Category</source>
 			</trans-unit>
@@ -71,11 +66,11 @@
 			<trans-unit id="tx_myaudioshop_domain_model_country">
 				<source>Country</source>
 			</trans-unit>
-
+			
 			<trans-unit id="static_countries.tx_extbase_type.Tx_Myaudioshop_Country">
 				<source>MyAudioShop Country</source>
 			</trans-unit>
-
+			
 			<trans-unit id="tx_myaudioshop_domain_model_user">
 				<source>User</source>
 			</trans-unit>
@@ -88,11 +83,11 @@
 			<trans-unit id="tx_myaudioshop_domain_model_user.country">
 				<source>Country</source>
 			</trans-unit>
-
+			
 			<trans-unit id="fe_users.tx_extbase_type.Tx_Myaudioshop_User">
 				<source>MyAudioShop User</source>
 			</trans-unit>
-
+			
 			<trans-unit id="tx_myaudioshop_domain_model_feedback">
 				<source>Feedback</source>
 			</trans-unit>

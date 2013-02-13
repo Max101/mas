@@ -135,6 +135,4 @@ $TCA['tx_myaudioshop_domain_model_category']['columns']['parent_category']['conf
 				 	'minitems' => 0,
 				 	'maxitems' => 20,
 				);
-
-
 ?>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2013-01-17T23:43:20Z" product-name="myaudioshop">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-02-12T23:55:39Z" product-name="myaudioshop">
 		<header/>
 		<body>
 
@@ -52,7 +52,7 @@
 			<trans-unit id="tx_myaudioshop_domain_model_masad.brand">
 				<source>Product brand</source>
 			</trans-unit>
-
+			
 			<trans-unit id="tx_myaudioshop_domain_model_category">
 				<source>Category</source>
 			</trans-unit>
@@ -62,11 +62,11 @@
 			<trans-unit id="tx_myaudioshop_domain_model_category.parent_category">
 				<source>parentCategory</source>
 			</trans-unit>
-
+			
 			<trans-unit id="tx_myaudioshop_domain_model_country">
 				<source>Country</source>
 			</trans-unit>
-
+			
 			<trans-unit id="tx_myaudioshop_domain_model_user">
 				<source>User</source>
 			</trans-unit>
@@ -79,7 +79,7 @@
 			<trans-unit id="tx_myaudioshop_domain_model_user.country">
 				<source>country</source>
 			</trans-unit>
-
+			
 			<trans-unit id="tx_myaudioshop_domain_model_feedback">
 				<source>Feedback</source>
 			</trans-unit>
@@ -101,7 +101,7 @@
 			<trans-unit id="tx_myaudioshop_domain_model_feedback.mas_ad">
 				<source>The ad the feedback is for</source>
 			</trans-unit>
-
+			
 			<trans-unit id="tx_myaudioshop_domain_model_message">
 				<source>Message</source>
 			</trans-unit>
@@ -117,21 +117,21 @@
 			<trans-unit id="tx_myaudioshop_domain_model_message.receiver">
 				<source>receiver</source>
 			</trans-unit>
-
+			
 			<trans-unit id="tx_myaudioshop_domain_model_brand">
 				<source>Brand</source>
 			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_brand.name">
 				<source>Brand name</source>
 			</trans-unit>
-
+			
 			<trans-unit id="tx_myaudioshop_domain_model_question">
 				<source>Question</source>
 			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_question.product">
 				<source>product</source>
 			</trans-unit>
-
+			
 		</body>
 	</file>
 </xliff>

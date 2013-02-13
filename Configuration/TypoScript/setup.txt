@@ -37,23 +37,3 @@ plugin.tx_myaudioshop._CSS_DEFAULT_STYLE (
 		vertical-align:top;
 	}
 )
-
-config.tx_extbase{
-    persistence{
-        classes{
-            MORLIC\Myaudioshop\Domain\Model\Country {
-                mapping {
-                    tableName = static_countries
-                    recordType = MORLIC\Myaudioshop\Domain\Model\Country
-                }
-            }            
-            MORLIC\Myaudioshop\Domain\Model\User {
-                mapping {
-                    tableName = fe_users
-                    recordType = MORLIC\Myaudioshop\Domain\Model\User 
-                }
-            }
-            
-    	}
-    }
-}

@@ -269,21 +269,21 @@ $TCA['tx_myaudioshop_domain_model_masad']['types'] = array(
 								hidden;;1,
 								name,
 								description,
-								--div--;LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_masad.tabs.image,
+								--div--;LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db_custom.xlf:tx_myaudioshop_domain_model_masad.tabs.image,
 								images,
-								--div--;LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_masad.tabs.prices,
+								--div--;LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db_custom.xlf:tx_myaudioshop_domain_model_masad.tabs.prices,
 								price,
 								new_price,
-								--div--;LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_masad.tabs.location,
+								--div--;LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db_custom.xlf:tx_myaudioshop_domain_model_masad.tabs.location,
 								location,
 								shipment_type,
 								payment,
-								--div--;LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_masad.tabs.extras,
+								--div--;LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db_custom.xlf:tx_myaudioshop_domain_model_masad.tabs.extras,
 								views,
 								remote,
 								manual,
 								weight,
-								--div--;LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_masad.tabs.realtions,
+								--div--;LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db_custom.xlf:tx_myaudioshop_domain_model_masad.tabs.realtions,
 								user,
 								category,
 								brand,
@@ -313,4 +313,13 @@ $TCA['tx_myaudioshop_domain_model_masad']['columns']['category']['config'] = arr
 				 	'maxitems' => 20,
 				);
 
+$TCA['tx_myaudioshop_domain_model_masad']['columns']['brand']['config']['items'] = array(array('-- Select Brand --', 0));
+
+
+$TCA['tx_myaudioshop_domain_model_masad']['columns']['payment']['config']['items'] = array(
+	array('-- Select Payment Type --', 0),
+	array('-- Select Payment Type --', 0),
+	array('-- Select Payment Type --', 0),
+);
+$TCA['tx_myaudioshop_domain_model_masad']['columns']['brand']['config']['items'] = array(array('-- Select Brand --', 0));
 ?>
