@@ -4,6 +4,7 @@
 		<header/>
 		<body>
 
+			<!-- Tab naming -->
 			<trans-unit id="tx_myaudioshop_domain_model_masad.tabs.image">
 				<source>Image</source>
 			</trans-unit>
@@ -11,13 +12,38 @@
 				<source>Prices</source>
 			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_masad.tabs.location">
-				<source>Location / Payment</source>
+				<source>Location / Payment / Shipment</source>
 			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_masad.tabs.extras">
 				<source>Extra</source>
 			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_masad.tabs.realtions">
 				<source>Category / Brand</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.tabs.feedbacks">
+				<source>Feedbacks</source>
+			</trans-unit>
+
+			<!-- Packaging types -->
+			<trans-unit id="tx_myaudioshop_domain_model_masad.packaging.0">
+				<source>-- Nothing Specified --</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.packaging.1">
+				<source>Own</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.packaging.2">
+				<source>Original package</source>
+			</trans-unit>
+
+			<!-- Who pays for shipment -->
+			<trans-unit id="tx_myaudioshop_domain_model_masad.shipment_pays.0">
+				<source>-- Nothing Specified --</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.shipment_pays.1">
+				<source>Buyer</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.shipment_pays.2">
+				<source>Seller</source>
 			</trans-unit>
 
 		</body>

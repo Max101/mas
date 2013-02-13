@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2013-02-12T23:55:39Z" product-name="myaudioshop">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-02-13T23:08:12Z" product-name="myaudioshop">
 		<header/>
 		<body>
 
@@ -28,17 +28,35 @@
 			<trans-unit id="tx_myaudioshop_domain_model_masad.remote">
 				<source>Remote control provided?</source>
 			</trans-unit>
-			<trans-unit id="tx_myaudioshop_domain_model_masad.shipment_type">
-				<source>Type of shipment provided</source>
-			</trans-unit>
-			<trans-unit id="tx_myaudioshop_domain_model_masad.payment">
-				<source>Type of payment accepted</source>
-			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_masad.views">
 				<source>Type of payment accepted</source>
 			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_masad.weight">
 				<source>weight</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.status">
+				<source>Status of the product ( Available, Sold, Selling, ... )</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.packaging">
+				<source>Packaging of the product</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.build_date">
+				<source>Build date or year</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.quantity">
+				<source>Quantity of product if more than one available</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.color">
+				<source>Color of the product</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.editor_pick">
+				<source>Is this an editor pick product?</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.serial">
+				<source>Product serial number</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.shipment_pays">
+				<source>Who pays for shipping costs?</source>
 			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_masad.category">
 				<source>The category the ad belongs to </source>
@@ -51,6 +69,15 @@
 			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_masad.brand">
 				<source>Product brand</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.feedback">
+				<source>Feedback</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.payment">
+				<source>Payment types supported</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.shipment">
+				<source>Shipment types supported</source>
 			</trans-unit>
 			
 			<trans-unit id="tx_myaudioshop_domain_model_category">
@@ -83,9 +110,6 @@
 			<trans-unit id="tx_myaudioshop_domain_model_feedback">
 				<source>Feedback</source>
 			</trans-unit>
-			<trans-unit id="tx_myaudioshop_domain_model_feedback.type">
-				<source>If feedback is for seller than true, else false</source>
-			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_feedback.rating">
 				<source>rating</source>
 			</trans-unit>
@@ -93,13 +117,7 @@
 				<source>message</source>
 			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_feedback.giver">
-				<source>Who gives the ad</source>
-			</trans-unit>
-			<trans-unit id="tx_myaudioshop_domain_model_feedback.receiver">
-				<source>Who receives the ad</source>
-			</trans-unit>
-			<trans-unit id="tx_myaudioshop_domain_model_feedback.mas_ad">
-				<source>The ad the feedback is for</source>
+				<source>Who gives the ad feedback</source>
 			</trans-unit>
 			
 			<trans-unit id="tx_myaudioshop_domain_model_message">
@@ -130,6 +148,20 @@
 			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_question.product">
 				<source>product</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_myaudioshop_domain_model_payment">
+				<source>Payment types</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_payment.name">
+				<source>Name of the payment type (Will be shown in the frontend)</source>
+			</trans-unit>
+			
+			<trans-unit id="tx_myaudioshop_domain_model_shipment">
+				<source>Shipment types</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_shipment.name">
+				<source>The name of the shipment type</source>
 			</trans-unit>
 			
 		</body>

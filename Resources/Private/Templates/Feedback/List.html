@@ -18,7 +18,6 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 <table  class="tx_myaudioshop" >
 	<tr>
-		<th><f:translate key="tx_myaudioshop_domain_model_feedback.type" /></th>
 		<th><f:translate key="tx_myaudioshop_domain_model_feedback.rating" /></th>
 		<th><f:translate key="tx_myaudioshop_domain_model_feedback.message" /></th>
 		<th> </th>
@@ -27,7 +26,6 @@ Otherwise your changes will be overwritten the next time you save the extension 
 
 	<f:for each="{feedbacks}" as="feedback">
 		<tr>
-			<td><f:link.action action="show" arguments="{feedback : feedback}"> {feedback.type}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{feedback : feedback}"> {feedback.rating}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{feedback : feedback}"> {feedback.message}</f:link.action></td>
 			<td><f:link.action action="edit" arguments="{feedback : feedback}">Edit</f:link.action></td>

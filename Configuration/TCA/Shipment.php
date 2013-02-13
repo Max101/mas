@@ -3,13 +3,13 @@ if (!defined ('TYPO3_MODE')) {
 	die ('Access denied.');
 }
 
-$TCA['tx_myaudioshop_domain_model_feedback'] = array(
-	'ctrl' => $TCA['tx_myaudioshop_domain_model_feedback']['ctrl'],
+$TCA['tx_myaudioshop_domain_model_shipment'] = array(
+	'ctrl' => $TCA['tx_myaudioshop_domain_model_shipment']['ctrl'],
 	'interface' => array(
-		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, rating, message, giver',
+		'showRecordFieldList' => 'sys_language_uid, l10n_parent, l10n_diffsource, hidden, name',
 	),
 	'types' => array(
-		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, rating, message, giver,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
+		'1' => array('showitem' => 'sys_language_uid;;;;1-1-1, l10n_parent, l10n_diffsource, hidden;;1, name,--div--;LLL:EXT:cms/locallang_ttc.xlf:tabs.access,starttime, endtime'),
 	),
 	'palettes' => array(
 		'1' => array('showitem' => ''),
@@ -37,8 +37,8 @@ $TCA['tx_myaudioshop_domain_model_feedback'] = array(
 				'items' => array(
 					array('', 0),
 				),
-				'foreign_table' => 'tx_myaudioshop_domain_model_feedback',
-				'foreign_table_where' => 'AND tx_myaudioshop_domain_model_feedback.pid=###CURRENT_PID### AND tx_myaudioshop_domain_model_feedback.sys_language_uid IN (-1,0)',
+				'foreign_table' => 'tx_myaudioshop_domain_model_shipment',
+				'foreign_table_where' => 'AND tx_myaudioshop_domain_model_shipment.pid=###CURRENT_PID### AND tx_myaudioshop_domain_model_shipment.sys_language_uid IN (-1,0)',
 			),
 		),
 		'l10n_diffsource' => array(
@@ -93,57 +93,17 @@ $TCA['tx_myaudioshop_domain_model_feedback'] = array(
 				),
 			),
 		),
-		'rating' => array(
+		'name' => array(
 			'exclude' => 0,
-			'label' => 'LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_feedback.rating',
+			'label' => 'LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_shipment.name',
 			'config' => array(
-				'type' => 'select',
-				'items' => array(
-					array('-- Label --', 0),
-				),
-				'size' => 1,
-				'maxitems' => 1,
-				'eval' => ''
-			),
-		),
-		'message' => array(
-			'exclude' => 0,
-			'label' => 'LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_feedback.message',
-			'config' => array(
-				'type' => 'text',
-				'cols' => 40,
-				'rows' => 15,
-				'eval' => 'trim'
-			),
-		),
-		'giver' => array(
-			'exclude' => 0,
-			'label' => 'LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_feedback.giver',
-			'config' => array(
-				'type' => 'select',
-				'foreign_table' => 'fe_users',
-				'minitems' => 0,
-				'maxitems' => 1,
-			),
-		),
-		'masad' => array(
-			'config' => array(
-				'type' => 'passthrough',
+				'type' => 'input',
+				'size' => 30,
+				'eval' => 'trim,required'
 			),
 		),
 	),
 );
 
 ## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
-
-$TCA['tx_myaudioshop_domain_model_feedback']['types'] = array(
-	'1' => array('showitem' => 'l10n_parent,
-								l10n_diffsource,
-								hidden;;1,
-								giver;;1,
-								rating,
-								message
-								'
-	),
-);
 ?>

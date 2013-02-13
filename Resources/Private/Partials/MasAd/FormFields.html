@@ -26,14 +26,6 @@
 	<f:translate key="tx_myaudioshop_domain_model_masad.remote" />
 </label><br />
 	<f:form.checkbox property="remote" value="1" /><br />
-<label for="shipmentType">
-	<f:translate key="tx_myaudioshop_domain_model_masad.shipment_type" />
-</label><br />
-	<f:form.textfield property="shipmentType" /><br />
-<label for="payment">
-	<f:translate key="tx_myaudioshop_domain_model_masad.payment" />
-</label><br />
-	<f:form.textfield property="payment" /><br />
 <label for="views">
 	<f:translate key="tx_myaudioshop_domain_model_masad.views" />
 </label><br />
@@ -42,3 +34,35 @@
 	<f:translate key="tx_myaudioshop_domain_model_masad.weight" />
 </label><br />
 	<f:form.textfield property="weight" /><br />
+<label for="status">
+	<f:translate key="tx_myaudioshop_domain_model_masad.status" /> <span class="required">(required)</span>
+</label><br />
+	<f:form.textfield property="status" /><br />
+<label for="packaging">
+	<f:translate key="tx_myaudioshop_domain_model_masad.packaging" />
+</label><br />
+	<f:form.textfield property="packaging" /><br />
+<label for="buildDate">
+	<f:translate key="tx_myaudioshop_domain_model_masad.build_date" />
+</label><br />
+	<f:form.textfield property="buildDate"  value="{masAd.buildDate->f:format.date()}" /><br />
+<label for="quantity">
+	<f:translate key="tx_myaudioshop_domain_model_masad.quantity" />
+</label><br />
+	<f:form.textfield property="quantity" /><br />
+<label for="color">
+	<f:translate key="tx_myaudioshop_domain_model_masad.color" />
+</label><br />
+	<f:form.textfield property="color" /><br />
+<label for="editorPick">
+	<f:translate key="tx_myaudioshop_domain_model_masad.editor_pick" />
+</label><br />
+	<f:form.checkbox property="editorPick" value="1" /><br />
+<label for="serial">
+	<f:translate key="tx_myaudioshop_domain_model_masad.serial" />
+</label><br />
+	<f:form.textfield property="serial" /><br />
+<label for="shipmentPays">
+	<f:translate key="tx_myaudioshop_domain_model_masad.shipment_pays" />
+</label><br />
+	<f:form.textfield property="shipmentPays" /><br />

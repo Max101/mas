@@ -34,7 +34,7 @@ $TCA['tx_myaudioshop_domain_model_masad'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'name,description,images,price,new_price,manual,remote,shipment_type,payment,views,weight,category,location,user,brand,',
+		'searchFields' => 'name,description,images,price,new_price,manual,remote,views,weight,status,packaging,build_date,quantity,color,editor_pick,serial,shipment_pays,category,location,user,brand,feedback,payment,shipment,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/MasAd.php',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_myaudioshop_domain_model_masad.gif'
 	),
@@ -180,7 +180,7 @@ $TCA['fe_users']['types']['Tx_Myaudioshop_User']['showitem'] .= 'favorite_user, 
 $TCA['tx_myaudioshop_domain_model_feedback'] = array(
 	'ctrl' => array(
 		'title'	=> 'LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_feedback',
-		'label' => 'type',
+		'label' => 'rating',
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
@@ -198,7 +198,7 @@ $TCA['tx_myaudioshop_domain_model_feedback'] = array(
 			'starttime' => 'starttime',
 			'endtime' => 'endtime',
 		),
-		'searchFields' => 'type,rating,message,giver,receiver,mas_ad,',
+		'searchFields' => 'rating,message,giver,',
 		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Feedback.php',
 		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_myaudioshop_domain_model_feedback.gif'
 	),
@@ -291,6 +291,64 @@ $TCA['tx_myaudioshop_domain_model_question'] = array(
 	),
 );
 
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_myaudioshop_domain_model_payment', 'EXT:myaudioshop/Resources/Private/Language/locallang_csh_tx_myaudioshop_domain_model_payment.xlf');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_myaudioshop_domain_model_payment');
+$TCA['tx_myaudioshop_domain_model_payment'] = array(
+	'ctrl' => array(
+		'title'	=> 'LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_payment',
+		'label' => 'name',
+		'tstamp' => 'tstamp',
+		'crdate' => 'crdate',
+		'cruser_id' => 'cruser_id',
+		'dividers2tabs' => TRUE,
+		'sortby' => 'sorting',
+		'versioningWS' => 2,
+		'versioning_followPages' => TRUE,
+		'origUid' => 't3_origuid',
+		'languageField' => 'sys_language_uid',
+		'transOrigPointerField' => 'l10n_parent',
+		'transOrigDiffSourceField' => 'l10n_diffsource',
+		'delete' => 'deleted',
+		'enablecolumns' => array(
+			'disabled' => 'hidden',
+			'starttime' => 'starttime',
+			'endtime' => 'endtime',
+		),
+		'searchFields' => 'name,',
+		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Payment.php',
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_myaudioshop_domain_model_payment.gif'
+	),
+);
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addLLrefForTCAdescr('tx_myaudioshop_domain_model_shipment', 'EXT:myaudioshop/Resources/Private/Language/locallang_csh_tx_myaudioshop_domain_model_shipment.xlf');
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::allowTableOnStandardPages('tx_myaudioshop_domain_model_shipment');
+$TCA['tx_myaudioshop_domain_model_shipment'] = array(
+	'ctrl' => array(
+		'title'	=> 'LLL:EXT:myaudioshop/Resources/Private/Language/locallang_db.xlf:tx_myaudioshop_domain_model_shipment',
+		'label' => 'name',
+		'tstamp' => 'tstamp',
+		'crdate' => 'crdate',
+		'cruser_id' => 'cruser_id',
+		'dividers2tabs' => TRUE,
+
+		'versioningWS' => 2,
+		'versioning_followPages' => TRUE,
+		'origUid' => 't3_origuid',
+		'languageField' => 'sys_language_uid',
+		'transOrigPointerField' => 'l10n_parent',
+		'transOrigDiffSourceField' => 'l10n_diffsource',
+		'delete' => 'deleted',
+		'enablecolumns' => array(
+			'disabled' => 'hidden',
+			'starttime' => 'starttime',
+			'endtime' => 'endtime',
+		),
+		'searchFields' => 'name,',
+		'dynamicConfigFile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($_EXTKEY) . 'Configuration/TCA/Shipment.php',
+		'iconfile' => \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_myaudioshop_domain_model_shipment.gif'
+	),
+);
+
 ## EXTENSION BUILDER DEFAULTS END TOKEN - Everything BEFORE this line is overwritten with the defaults of the extension builder
 //var_export($TCA['fe_users']['columns']);die();
 //\TYPO3\CMS\Core\Utility\DebugUtility::debug($TCA['fe_users']['columns']);die();
@@ -306,5 +364,4 @@ if (is_array($TCA['fe_users']['columns']['tx_extbase_type'])) {
 $TCA['tx_myaudioshop_domain_model_masad']['ctrl']['iconfile'] = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_myaudioshop_domain_model_masad.png';
 $TCA['tx_myaudioshop_domain_model_category']['ctrl']['iconfile'] = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_myaudioshop_domain_model_category.png';
 $TCA['tx_myaudioshop_domain_model_brand']['ctrl']['iconfile'] = \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extRelPath($_EXTKEY) . 'Resources/Public/Icons/tx_myaudioshop_domain_model_brand.png';
-
 ?>

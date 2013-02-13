@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2013-02-12T23:55:39Z" product-name="myaudioshop">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-02-13T23:08:13Z" product-name="myaudioshop">
 		<header/>
 		<body>
 
-			<trans-unit id="type.description">
-				<source>If feedback is for seller than true, else false</source>
-			</trans-unit>
 			<trans-unit id="rating.description">
 				<source>rating</source>
 			</trans-unit>
@@ -14,13 +11,7 @@
 				<source>message</source>
 			</trans-unit>
 			<trans-unit id="giver.description">
-				<source>Who gives the ad</source>
-			</trans-unit>
-			<trans-unit id="receiver.description">
-				<source>Who receives the ad</source>
-			</trans-unit>
-			<trans-unit id="mas_ad.description">
-				<source>The ad the feedback is for</source>
+				<source>Who gives the ad feedback</source>
 			</trans-unit>
 		</body>
 	</file>

@@ -32,84 +32,33 @@ namespace MORLIC\Myaudioshop\Domain\Model;
  * @license http://www.gnu.org/licenses/gpl.html GNU General Public License, version 3 or later
  *
  */
-class Feedback extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
+class Payment extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 
 	/**
-	 * rating
-	 *
-	 * @var \integer
-	 */
-	protected $rating;
-
-	/**
-	 * message
+	 * Name of the payment type (Will be shown in the frontend)
 	 *
 	 * @var \string
+	 * @validate NotEmpty
 	 */
-	protected $message;
+	protected $name;
 
 	/**
-	 * Who gives the ad feedback
+	 * Returns the name
 	 *
-	 * @var \MORLIC\Myaudioshop\Domain\Model\User
+	 * @return \string $name
 	 */
-	protected $giver;
-
-	/**
-	 * Returns the rating
-	 *
-	 * @return \integer $rating
-	 */
-	public function getRating() {
-		return $this->rating;
+	public function getName() {
+		return $this->name;
 	}
 
 	/**
-	 * Sets the rating
+	 * Sets the name
 	 *
-	 * @param \integer $rating
+	 * @param \string $name
 	 * @return void
 	 */
-	public function setRating($rating) {
-		$this->rating = $rating;
-	}
-
-	/**
-	 * Returns the message
-	 *
-	 * @return \string $message
-	 */
-	public function getMessage() {
-		return $this->message;
-	}
-
-	/**
-	 * Sets the message
-	 *
-	 * @param \string $message
-	 * @return void
-	 */
-	public function setMessage($message) {
-		$this->message = $message;
-	}
-
-	/**
-	 * Returns the giver
-	 *
-	 * @return \MORLIC\Myaudioshop\Domain\Model\User $giver
-	 */
-	public function getGiver() {
-		return $this->giver;
-	}
-
-	/**
-	 * Sets the giver
-	 *
-	 * @param \MORLIC\Myaudioshop\Domain\Model\User $giver
-	 * @return void
-	 */
-	public function setGiver(\MORLIC\Myaudioshop\Domain\Model\User $giver) {
-		$this->giver = $giver;
+	public function setName($name) {
+		$this->name = $name;
 	}
 
 }

@@ -25,10 +25,16 @@ Otherwise your changes will be overwritten the next time you save the extension 
 		<th><f:translate key="tx_myaudioshop_domain_model_masad.new_price" /></th>
 		<th><f:translate key="tx_myaudioshop_domain_model_masad.manual" /></th>
 		<th><f:translate key="tx_myaudioshop_domain_model_masad.remote" /></th>
-		<th><f:translate key="tx_myaudioshop_domain_model_masad.shipment_type" /></th>
-		<th><f:translate key="tx_myaudioshop_domain_model_masad.payment" /></th>
 		<th><f:translate key="tx_myaudioshop_domain_model_masad.views" /></th>
 		<th><f:translate key="tx_myaudioshop_domain_model_masad.weight" /></th>
+		<th><f:translate key="tx_myaudioshop_domain_model_masad.status" /></th>
+		<th><f:translate key="tx_myaudioshop_domain_model_masad.packaging" /></th>
+		<th><f:translate key="tx_myaudioshop_domain_model_masad.build_date" /></th>
+		<th><f:translate key="tx_myaudioshop_domain_model_masad.quantity" /></th>
+		<th><f:translate key="tx_myaudioshop_domain_model_masad.color" /></th>
+		<th><f:translate key="tx_myaudioshop_domain_model_masad.editor_pick" /></th>
+		<th><f:translate key="tx_myaudioshop_domain_model_masad.serial" /></th>
+		<th><f:translate key="tx_myaudioshop_domain_model_masad.shipment_pays" /></th>
 		<th> </th>
 		<th> </th>
 	</tr>
@@ -42,10 +48,16 @@ Otherwise your changes will be overwritten the next time you save the extension 
 			<td><f:link.action action="show" arguments="{masAd : masAd}"> {masAd.newPrice}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{masAd : masAd}"> {masAd.manual}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{masAd : masAd}"> {masAd.remote}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{masAd : masAd}"> {masAd.shipmentType}</f:link.action></td>
-			<td><f:link.action action="show" arguments="{masAd : masAd}"> {masAd.payment}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{masAd : masAd}"> {masAd.views}</f:link.action></td>
 			<td><f:link.action action="show" arguments="{masAd : masAd}"> {masAd.weight}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{masAd : masAd}"> {masAd.status}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{masAd : masAd}"> {masAd.packaging}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{masAd : masAd}"> {masAd.buildDate -> f:format.date()}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{masAd : masAd}"> {masAd.quantity}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{masAd : masAd}"> {masAd.color}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{masAd : masAd}"> {masAd.editorPick}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{masAd : masAd}"> {masAd.serial}</f:link.action></td>
+			<td><f:link.action action="show" arguments="{masAd : masAd}"> {masAd.shipmentPays}</f:link.action></td>
 			<td><f:link.action action="edit" arguments="{masAd : masAd}">Edit</f:link.action></td>
 			<td><f:link.action action="delete" arguments="{masAd : masAd}">Delete</f:link.action></td>
 		</tr>

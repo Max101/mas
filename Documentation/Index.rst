@@ -17,8 +17,8 @@ Extension Name
 :Description: manuals covering TYPO3 extension "MyAudioShop"
 :Language: en
 :Author: Mitja Orlić
-:Creation: 2013-02-12
-:Generation: 23:55
+:Creation: 2013-02-13
+:Generation: 23:08
 :Licence: Open Content License available from `www.opencontent.org/opl.shtml <http://www.opencontent.org/opl.shtml>`_
 
 The content of this document is related to TYPO3, a GNU/GPL CMS/Framework available from `www.typo3.org

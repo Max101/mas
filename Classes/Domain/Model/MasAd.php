@@ -87,20 +87,6 @@ class MasAd extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	protected $remote = FALSE;
 
 	/**
-	 * Type of shipment provided
-	 *
-	 * @var \integer
-	 */
-	protected $shipmentType;
-
-	/**
-	 * Type of payment accepted
-	 *
-	 * @var \integer
-	 */
-	protected $payment;
-
-	/**
 	 * Type of payment accepted
 	 *
 	 * @var \integer
@@ -141,6 +127,84 @@ class MasAd extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 * @var \MORLIC\Myaudioshop\Domain\Model\Brand
 	 */
 	protected $brand;
+
+	/**
+	 * Feedback
+	 *
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\MORLIC\Myaudioshop\Domain\Model\Feedback>
+	 */
+	protected $feedback;
+
+	/**
+	 * Payment types supported
+	 *
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\MORLIC\Myaudioshop\Domain\Model\Payment>
+	 */
+	protected $payment;
+
+	/**
+	 * Shipment types supported
+	 *
+	 * @var \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\MORLIC\Myaudioshop\Domain\Model\Shipment>
+	 */
+	protected $shipment;
+
+	/**
+	 * Status of the product ( Available, Sold, Selling, ... )
+	 *
+	 * @var \integer
+	 * @validate NotEmpty
+	 */
+	protected $status;
+
+	/**
+	 * Packaging of the product
+	 *
+	 * @var \integer
+	 */
+	protected $packaging;
+
+	/**
+	 * Build date or year
+	 *
+	 * @var \DateTime
+	 */
+	protected $buildDate;
+
+	/**
+	 * Quantity of product if more than one available
+	 *
+	 * @var \integer
+	 */
+	protected $quantity;
+
+	/**
+	 * Color of the product
+	 *
+	 * @var \string
+	 */
+	protected $color;
+
+	/**
+	 * Is this an editor pick product?
+	 *
+	 * @var boolean
+	 */
+	protected $editorPick = FALSE;
+
+	/**
+	 * Product serial number
+	 *
+	 * @var \string
+	 */
+	protected $serial;
+
+	/**
+	 * Who pays for shipping costs?
+	 *
+	 * @var \integer
+	 */
+	protected $shipmentPays;
 
 	/**
 	 * Returns the name
@@ -294,44 +358,6 @@ class MasAd extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	}
 
 	/**
-	 * Returns the shipmentType
-	 *
-	 * @return \integer $shipmentType
-	 */
-	public function getShipmentType() {
-		return $this->shipmentType;
-	}
-
-	/**
-	 * Sets the shipmentType
-	 *
-	 * @param \integer $shipmentType
-	 * @return void
-	 */
-	public function setShipmentType($shipmentType) {
-		$this->shipmentType = $shipmentType;
-	}
-
-	/**
-	 * Returns the payment
-	 *
-	 * @return \integer $payment
-	 */
-	public function getPayment() {
-		return $this->payment;
-	}
-
-	/**
-	 * Sets the payment
-	 *
-	 * @param \integer $payment
-	 * @return void
-	 */
-	public function setPayment($payment) {
-		$this->payment = $payment;
-	}
-
-	/**
 	 * Returns the views
 	 *
 	 * @return \integer $views
@@ -443,6 +469,312 @@ class MasAd extends \TYPO3\CMS\Extbase\DomainObject\AbstractEntity {
 	 */
 	public function setBrand(\MORLIC\Myaudioshop\Domain\Model\Brand $brand) {
 		$this->brand = $brand;
+	}
+
+	/**
+	 * __construct
+	 *
+	 * @return MasAd
+	 */
+	public function __construct() {
+		//Do not remove the next line: It would break the functionality
+		$this->initStorageObjects();
+	}
+
+	/**
+	 * Initializes all ObjectStorage properties.
+	 *
+	 * @return void
+	 */
+	protected function initStorageObjects() {
+		/**
+		 * Do not modify this method!
+		 * It will be rewritten on each save in the extension builder
+		 * You may modify the constructor of this class instead
+		 */
+		$this->feedback = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		
+		$this->payment = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+		
+		$this->shipment = new \TYPO3\CMS\Extbase\Persistence\ObjectStorage();
+	}
+
+	/**
+	 * Adds a Feedback
+	 *
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Feedback $feedback
+	 * @return void
+	 */
+	public function addFeedback(\MORLIC\Myaudioshop\Domain\Model\Feedback $feedback) {
+		$this->feedback->attach($feedback);
+	}
+
+	/**
+	 * Removes a Feedback
+	 *
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Feedback $feedbackToRemove The Feedback to be removed
+	 * @return void
+	 */
+	public function removeFeedback(\MORLIC\Myaudioshop\Domain\Model\Feedback $feedbackToRemove) {
+		$this->feedback->detach($feedbackToRemove);
+	}
+
+	/**
+	 * Returns the feedback
+	 *
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\MORLIC\Myaudioshop\Domain\Model\Feedback> $feedback
+	 */
+	public function getFeedback() {
+		return $this->feedback;
+	}
+
+	/**
+	 * Sets the feedback
+	 *
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\MORLIC\Myaudioshop\Domain\Model\Feedback> $feedback
+	 * @return void
+	 */
+	public function setFeedback(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $feedback) {
+		$this->feedback = $feedback;
+	}
+
+	/**
+	 * Adds a Payment
+	 *
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Payment $payment
+	 * @return void
+	 */
+	public function addPayment(\MORLIC\Myaudioshop\Domain\Model\Payment $payment) {
+		$this->payment->attach($payment);
+	}
+
+	/**
+	 * Removes a Payment
+	 *
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Payment $paymentToRemove The Payment to be removed
+	 * @return void
+	 */
+	public function removePayment(\MORLIC\Myaudioshop\Domain\Model\Payment $paymentToRemove) {
+		$this->payment->detach($paymentToRemove);
+	}
+
+	/**
+	 * Returns the payment
+	 *
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\MORLIC\Myaudioshop\Domain\Model\Payment> $payment
+	 */
+	public function getPayment() {
+		return $this->payment;
+	}
+
+	/**
+	 * Sets the payment
+	 *
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\MORLIC\Myaudioshop\Domain\Model\Payment> $payment
+	 * @return void
+	 */
+	public function setPayment(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $payment) {
+		$this->payment = $payment;
+	}
+
+	/**
+	 * Adds a Shipment
+	 *
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Shipment $shipment
+	 * @return void
+	 */
+	public function addShipment(\MORLIC\Myaudioshop\Domain\Model\Shipment $shipment) {
+		$this->shipment->attach($shipment);
+	}
+
+	/**
+	 * Removes a Shipment
+	 *
+	 * @param \MORLIC\Myaudioshop\Domain\Model\Shipment $shipmentToRemove The Shipment to be removed
+	 * @return void
+	 */
+	public function removeShipment(\MORLIC\Myaudioshop\Domain\Model\Shipment $shipmentToRemove) {
+		$this->shipment->detach($shipmentToRemove);
+	}
+
+	/**
+	 * Returns the shipment
+	 *
+	 * @return \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\MORLIC\Myaudioshop\Domain\Model\Shipment> $shipment
+	 */
+	public function getShipment() {
+		return $this->shipment;
+	}
+
+	/**
+	 * Sets the shipment
+	 *
+	 * @param \TYPO3\CMS\Extbase\Persistence\ObjectStorage<\MORLIC\Myaudioshop\Domain\Model\Shipment> $shipment
+	 * @return void
+	 */
+	public function setShipment(\TYPO3\CMS\Extbase\Persistence\ObjectStorage $shipment) {
+		$this->shipment = $shipment;
+	}
+
+	/**
+	 * Returns the status
+	 *
+	 * @return \integer $status
+	 */
+	public function getStatus() {
+		return $this->status;
+	}
+
+	/**
+	 * Sets the status
+	 *
+	 * @param \integer $status
+	 * @return void
+	 */
+	public function setStatus($status) {
+		$this->status = $status;
+	}
+
+	/**
+	 * Returns the packaging
+	 *
+	 * @return \integer $packaging
+	 */
+	public function getPackaging() {
+		return $this->packaging;
+	}
+
+	/**
+	 * Sets the packaging
+	 *
+	 * @param \integer $packaging
+	 * @return void
+	 */
+	public function setPackaging($packaging) {
+		$this->packaging = $packaging;
+	}
+
+	/**
+	 * Returns the buildDate
+	 *
+	 * @return \DateTime $buildDate
+	 */
+	public function getBuildDate() {
+		return $this->buildDate;
+	}
+
+	/**
+	 * Sets the buildDate
+	 *
+	 * @param \DateTime $buildDate
+	 * @return void
+	 */
+	public function setBuildDate($buildDate) {
+		$this->buildDate = $buildDate;
+	}
+
+	/**
+	 * Returns the quantity
+	 *
+	 * @return \integer $quantity
+	 */
+	public function getQuantity() {
+		return $this->quantity;
+	}
+
+	/**
+	 * Sets the quantity
+	 *
+	 * @param \integer $quantity
+	 * @return void
+	 */
+	public function setQuantity($quantity) {
+		$this->quantity = $quantity;
+	}
+
+	/**
+	 * Returns the color
+	 *
+	 * @return \string $color
+	 */
+	public function getColor() {
+		return $this->color;
+	}
+
+	/**
+	 * Sets the color
+	 *
+	 * @param \string $color
+	 * @return void
+	 */
+	public function setColor($color) {
+		$this->color = $color;
+	}
+
+	/**
+	 * Returns the editorPick
+	 *
+	 * @return boolean $editorPick
+	 */
+	public function getEditorPick() {
+		return $this->editorPick;
+	}
+
+	/**
+	 * Sets the editorPick
+	 *
+	 * @param boolean $editorPick
+	 * @return void
+	 */
+	public function setEditorPick($editorPick) {
+		$this->editorPick = $editorPick;
+	}
+
+	/**
+	 * Returns the boolean state of editorPick
+	 *
+	 * @return boolean
+	 */
+	public function isEditorPick() {
+		return $this->getEditorPick();
+	}
+
+	/**
+	 * Returns the serial
+	 *
+	 * @return \string $serial
+	 */
+	public function getSerial() {
+		return $this->serial;
+	}
+
+	/**
+	 * Sets the serial
+	 *
+	 * @param \string $serial
+	 * @return void
+	 */
+	public function setSerial($serial) {
+		$this->serial = $serial;
+	}
+
+	/**
+	 * Returns the shipmentPays
+	 *
+	 * @return \integer $shipmentPays
+	 */
+	public function getShipmentPays() {
+		return $this->shipmentPays;
+	}
+
+	/**
+	 * Sets the shipmentPays
+	 *
+	 * @param \integer $shipmentPays
+	 * @return void
+	 */
+	public function setShipmentPays($shipmentPays) {
+		$this->shipmentPays = $shipmentPays;
 	}
 
 }

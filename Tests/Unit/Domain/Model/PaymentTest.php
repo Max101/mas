@@ -26,7 +26,7 @@ namespace MORLIC\Myaudioshop\Tests;
  ***************************************************************/
 
 /**
- * Test case for class \MORLIC\Myaudioshop\Domain\Model\Feedback.
+ * Test case for class \MORLIC\Myaudioshop\Domain\Model\Payment.
  *
  * @version $Id$
  * @copyright Copyright belongs to the respective authors
@@ -37,14 +37,14 @@ namespace MORLIC\Myaudioshop\Tests;
  *
  * @author Mitja Orlić <mitja_max@yahoo.com>
  */
-class FeedbackTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
+class PaymentTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
 	/**
-	 * @var \MORLIC\Myaudioshop\Domain\Model\Feedback
+	 * @var \MORLIC\Myaudioshop\Domain\Model\Payment
 	 */
 	protected $fixture;
 
 	public function setUp() {
-		$this->fixture = new \MORLIC\Myaudioshop\Domain\Model\Feedback();
+		$this->fixture = new \MORLIC\Myaudioshop\Domain\Model\Payment();
 	}
 
 	public function tearDown() {
@@ -54,51 +54,19 @@ class FeedbackTest extends \TYPO3\CMS\Extbase\Tests\Unit\BaseTestCase {
 	/**
 	 * @test
 	 */
-	public function getRatingReturnsInitialValueForInteger() { 
-		$this->assertSame(
-			0,
-			$this->fixture->getRating()
-		);
-	}
+	public function getNameReturnsInitialValueForString() { }
 
 	/**
 	 * @test
 	 */
-	public function setRatingForIntegerSetsRating() { 
-		$this->fixture->setRating(12);
-
-		$this->assertSame(
-			12,
-			$this->fixture->getRating()
-		);
-	}
-	
-	/**
-	 * @test
-	 */
-	public function getMessageReturnsInitialValueForString() { }
-
-	/**
-	 * @test
-	 */
-	public function setMessageForStringSetsMessage() { 
-		$this->fixture->setMessage('Conceived at T3CON10');
+	public function setNameForStringSetsName() { 
+		$this->fixture->setName('Conceived at T3CON10');
 
 		$this->assertSame(
 			'Conceived at T3CON10',
-			$this->fixture->getMessage()
+			$this->fixture->getName()
 		);
 	}
-	
-	/**
-	 * @test
-	 */
-	public function getGiverReturnsInitialValueForUser() { }
-
-	/**
-	 * @test
-	 */
-	public function setGiverForUserSetsGiver() { }
 	
 }
 ?>

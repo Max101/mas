@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2013-02-12T23:55:39Z" product-name="myaudioshop">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-02-13T23:08:13Z" product-name="myaudioshop">
 		<header/>
 		<body>
 
@@ -25,17 +25,35 @@
 			<trans-unit id="remote.description">
 				<source>Remote control provided?</source>
 			</trans-unit>
-			<trans-unit id="shipment_type.description">
-				<source>Type of shipment provided</source>
-			</trans-unit>
-			<trans-unit id="payment.description">
-				<source>Type of payment accepted</source>
-			</trans-unit>
 			<trans-unit id="views.description">
 				<source>Type of payment accepted</source>
 			</trans-unit>
 			<trans-unit id="weight.description">
 				<source>weight</source>
+			</trans-unit>
+			<trans-unit id="status.description">
+				<source>Status of the product ( Available, Sold, Selling, ... )</source>
+			</trans-unit>
+			<trans-unit id="packaging.description">
+				<source>Packaging of the product</source>
+			</trans-unit>
+			<trans-unit id="build_date.description">
+				<source>Build date or year</source>
+			</trans-unit>
+			<trans-unit id="quantity.description">
+				<source>Quantity of product if more than one available</source>
+			</trans-unit>
+			<trans-unit id="color.description">
+				<source>Color of the product</source>
+			</trans-unit>
+			<trans-unit id="editor_pick.description">
+				<source>Is this an editor pick product?</source>
+			</trans-unit>
+			<trans-unit id="serial.description">
+				<source>Product serial number</source>
+			</trans-unit>
+			<trans-unit id="shipment_pays.description">
+				<source>Who pays for shipping costs?</source>
 			</trans-unit>
 			<trans-unit id="category.description">
 				<source>The category the ad belongs to </source>
@@ -48,6 +66,15 @@
 			</trans-unit>
 			<trans-unit id="brand.description">
 				<source>Product brand</source>
+			</trans-unit>
+			<trans-unit id="feedback.description">
+				<source>Feedback</source>
+			</trans-unit>
+			<trans-unit id="payment.description">
+				<source>Payment types supported</source>
+			</trans-unit>
+			<trans-unit id="shipment.description">
+				<source>Shipment types supported</source>
 			</trans-unit>
 		</body>
 	</file>

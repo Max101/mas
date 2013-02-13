@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-	<file source-language="en" datatype="plaintext" original="messages" date="2013-02-12T23:55:39Z" product-name="myaudioshop">
+	<file source-language="en" datatype="plaintext" original="messages" date="2013-02-13T23:08:13Z" product-name="myaudioshop">
 		<header/>
 		<body>
 
@@ -28,17 +28,35 @@
 			<trans-unit id="tx_myaudioshop_domain_model_masad.remote">
 				<source>Remote</source>
 			</trans-unit>
-			<trans-unit id="tx_myaudioshop_domain_model_masad.shipment_type">
-				<source>Shipment Type</source>
-			</trans-unit>
-			<trans-unit id="tx_myaudioshop_domain_model_masad.payment">
-				<source>Payment</source>
-			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_masad.views">
 				<source>Views</source>
 			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_masad.weight">
 				<source>Weight</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.status">
+				<source>Status</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.packaging">
+				<source>Packaging</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.build_date">
+				<source>Build Date</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.quantity">
+				<source>Quantity</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.color">
+				<source>Color</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.editor_pick">
+				<source>Editor Pick</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.serial">
+				<source>Serial</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.shipment_pays">
+				<source>Shipment Pays</source>
 			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_masad.category">
 				<source>Category</source>
@@ -51,6 +69,15 @@
 			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_masad.brand">
 				<source>Brand</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.feedback">
+				<source>Feedback</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.payment">
+				<source>Payment</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_masad.shipment">
+				<source>Shipment</source>
 			</trans-unit>
 
 			<trans-unit id="tx_myaudioshop_domain_model_category">
@@ -91,9 +118,6 @@
 			<trans-unit id="tx_myaudioshop_domain_model_feedback">
 				<source>Feedback</source>
 			</trans-unit>
-			<trans-unit id="tx_myaudioshop_domain_model_feedback.type">
-				<source>Type</source>
-			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_feedback.rating">
 				<source>Rating</source>
 			</trans-unit>
@@ -102,12 +126,6 @@
 			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_feedback.giver">
 				<source>Giver</source>
-			</trans-unit>
-			<trans-unit id="tx_myaudioshop_domain_model_feedback.receiver">
-				<source>Receiver</source>
-			</trans-unit>
-			<trans-unit id="tx_myaudioshop_domain_model_feedback.mas_ad">
-				<source>Mas Ad</source>
 			</trans-unit>
 
 			<trans-unit id="tx_myaudioshop_domain_model_message">
@@ -138,6 +156,20 @@
 			</trans-unit>
 			<trans-unit id="tx_myaudioshop_domain_model_question.product">
 				<source>Product</source>
+			</trans-unit>
+
+			<trans-unit id="tx_myaudioshop_domain_model_payment">
+				<source>Payment</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_payment.name">
+				<source>Name</source>
+			</trans-unit>
+
+			<trans-unit id="tx_myaudioshop_domain_model_shipment">
+				<source>Shipment</source>
+			</trans-unit>
+			<trans-unit id="tx_myaudioshop_domain_model_shipment.name">
+				<source>Name</source>
 			</trans-unit>
 
 		</body>
